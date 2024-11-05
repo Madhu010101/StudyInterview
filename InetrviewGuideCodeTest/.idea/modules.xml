@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/InetrviewGuideCodeTest.iml" filepath="$PROJECT_DIR$/.idea/InetrviewGuideCodeTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java Interview quetion/JavaInterviewQuestionsAndAnswers/JavaInterviewGuide.iml" filepath="$PROJECT_DIR$/java Interview quetion/JavaInterviewQuestionsAndAnswers/JavaInterviewGuide.iml" />
+    </modules>
+  </component>
+</project>

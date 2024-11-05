@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Chapter+7+v2/Chapter 7/fleetman-webapp" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Chapter+7+v2/Chapter 7/fleetman-webapp/pom.xml" />
+        <option value="$PROJECT_DIR$/doc/java Interview quetion/JavaInterviewQuestionsAndAnswers/pom.xml" />
+        <option value="$PROJECT_DIR$/gs-scheduling-tasks-main/complete/pom.xml" />
+        <option value="$PROJECT_DIR$/InetrviewGuideCodeTest/java Interview quetion/JavaInterviewQuestionsAndAnswers/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

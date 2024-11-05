@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/config-service/config-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/config-service/config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/department-service/department-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/department-service/department-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/discovery-service/discovery-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/employee-service/employee-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/employee-service/employee-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kuberneties.iml" filepath="$PROJECT_DIR$/.idea/kuberneties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/organization-service/organization-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/organization-service/organization-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/proxy-service/proxy-service.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/proxy-service/proxy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/sample-spring-microservices-new.iml" filepath="$PROJECT_DIR$/Kubernetesmicro/sample-spring-microservices-new/sample-spring-microservices-new.iml" />
+    </modules>
+  </component>
+</project>
