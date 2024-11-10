@@ -1,0 +1,233 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: schema
+data:
+  file.avsc: >-
+    {
+      "type": "record",
+      "name": "SignificantEvent",
+      "namespace": "za.co.frg.hr.integration",
+      "fields": [
+        {
+          "name": "eventHeader",
+          "type": [
+            "null",
+            {
+              "type": "record",
+              "name": "EventHeader",
+              "fields": [
+                {
+                  "name": "sourceSystemCode",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "eventOrigin",
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "record",
+                      "name": "EventOrigin",
+                      "fields": [
+                        {
+                          "name": "eventOriginType",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "eventOriginName",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "eventArchContext",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "eventDateTime",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "eventAction",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "eventUUID",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "correlation",
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "record",
+                      "name": "Correlation",
+                      "fields": [
+                        {
+                          "name": "correlationName",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "correlationValue",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "significantEventKey",
+          "type": [
+            "null",
+            {
+              "type": "record",
+              "name": "SignificantEventKey",
+              "fields": [
+                {
+                  "name": "keyAttributeContext",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "keyAttribute",
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "record",
+                      "name": "KeyAttribute",
+                      "fields": [
+                        {
+                          "name": "keyAttributeName",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "keyAttributeDataType",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "keyAttributeValue",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "significantEventDetail",
+          "type": [
+            "null",
+            {
+              "type": "record",
+              "name": "SignificantEventDetail",
+              "fields": [
+                {
+                  "name": "significantEventName",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "attribute",
+                  "type": {
+                    "type": "array",
+                    "items": {
+                      "type": "record",
+                      "name": "Attribute",
+                      "fields": [
+                        {
+                          "name": "attributeDataType",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "attributeKey",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "attributeValue",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }

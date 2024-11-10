@@ -1,0 +1,4 @@
+za\co\fnb\idna\KafkaToKafkaApplication.class
+za\co\fnb\idna\AvroRecord.class
+za\co\fnb\idna\ConfluentKafkaAvroDeserializer.class
+za\co\fnb\idna\ConfluentKafkaAvroSerializer.class

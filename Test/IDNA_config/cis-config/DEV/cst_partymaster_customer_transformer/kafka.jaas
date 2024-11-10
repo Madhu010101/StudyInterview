@@ -1,0 +1,23 @@
+KafkaClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_idna_eeh_kk_dev"
+keyTab="/deployments/karaf/etc/SVC_CUS_CACHE_DEV.keytab"
+principal="svc_citcstdev@FNB.CO.ZA";
+};
+
+RegistryClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_idna_eeh_kk_dev"
+keyTab="/deployments/karaf/etc/SVC_CUS_CACHE_DEV.keytab"
+principal="svc_citcstdev@FNB.CO.ZA";
+};
+
+com.sun.security.jgss.krb5.initiate {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_idna_eeh_kk_dev"
+keyTab="/deployments/karaf/etc/SVC_CUS_CACHE_DEV.keytab"
+principal="svc_citcstdev@FNB.CO.ZA";
+};

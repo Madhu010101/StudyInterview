@@ -1,0 +1,148 @@
+{
+  "input" : {
+    "headerInput" : {
+      "originatingChannel" : "CUSTOMER",
+      "branch" : 1,
+      "terminal" : 1,
+      "operatorID" : "CISH",
+      "stubName" : "CISGWCIS"
+    },
+    "functionInput" : {
+      "inputData" : {
+        "customerCompanyId" : 15,
+        "customerNumber" : 150,
+        "customerEchoToken" : "DC58AFDC98FAC4D2DA75B6EBE9C228B6II172"
+      },
+      "demographicCommonData" : {
+        "customerBranch" : 5282,
+        "customerType" : "01",
+        "customerCorrespondenceLanguage" : "ENG",
+        "customerPrimaryIdentityType" : "RSAID",
+        "customerPrimaryIdentityNumber" : "4501248182274",
+        "customerPrimaryIdentityCountryIssued" : "ZA",
+        "customerPrimaryIdentityEffectiveDate" : 20050506,
+        "customerPrimaryIdentityExpiryDate" : 99999999,
+        "customerClientCustomerNumber" : "80011008",
+        "officerCodePrimary" : "AO353",
+        "officerCodeSecondary" : "",
+        "customerTaxReference" : "42222112224",
+        "customerRiskIndicator" : "",
+        "customerRiskReason" : 0
+      },
+      "demographicIndividualData" : {
+        "nameFormat1" : {
+          "customerFullName" : "",
+          "customerMiddleNames" : ""
+        },
+        "nameFormat2" : {
+          "customerNameTitle" : "MR",
+          "customerFirstName" : "TEST",
+          "customerLastName" : "HAAG",
+          "customerMiddleNameFirst" : "",
+          "customerMiddleNameSecond" : "",
+          "customerMiddleNameThird" : "",
+          "customerMiddleNameFourth" : "",
+          "customerMiddleNameFifth" : ""
+        },
+        "customerCountryOfBirth" : "ZA",
+        "customerCountryOfPermanentResidence" : "ZA",
+        "customerCountryOfCitizenship" : "ZA",
+        "customerCountryOfNationality" : "ZA",
+        "dateOfBirth" : 19450124,
+        "customerDateDeceased" : 0,
+        "customerRace" : 0,
+        "customerGender" : "M",
+        "customerMaritalStatus" : "M",
+        "customerMaritalContract" : "TRI",
+        "customerMaritalConsent" : "N",
+        "customerNumberOfDependents" : 4,
+        "customerOccupationCode" : "CR",
+        "customerResidencyStatus" : "05",
+        "customerGroupScheme" : "ZMAK",
+        "customerAnnualIncome" : 9800000,
+        "customerPropertyBonded" : "B",
+        "customerPropertyOwnership" : "O",
+        "customerVipIndicator" : "N",
+        "customerVipCategory" : "",
+        "customerSensitiveFlag" : "N"
+      },
+      "demographicCommercialData" : {
+        "customerName" : "MR TEST HAAG",
+        "customerName2" : "",
+        "customerTradingAsName" : "",
+        "customerTaxYearEnd" : 0,
+        "customerCountryEstablished" : "",
+        "customerCountryOfOperation" : "",
+        "customerCountryHeadOffice" : "",
+        "customerStateOwnedCompany" : "",
+        "customerNumberOfEmployees" : "",
+        "customerDateEstablished" : 0,
+        "customerDateOfOperation" : 0,
+        "customerTurnoverCode" : "",
+        "customerTurnoverAmount" : 0,
+        "customerNumberOfSignatories" : 0,
+        "customerVATRegistrationNumber" : "",
+        "customerCIBindicator" : ""
+      },
+      "contactCommonData" : {
+        "customerEmailAddress" : "CDCWORKER@HERE.COM",
+        "cellphoneNumber" : {
+          "customerCellphoneDiallingCode" : "082",
+          "customerCellphoneNumber" : "5656631"
+        }
+      },
+      "contactIndividualData" : {
+        "customerPreferredMethodOfContact" : "E",
+        "homeNumber" : {
+          "customerHomephoneDiallingCode" : "082",
+          "customerHomephoneNumber" : "1234361"
+        },
+        "workNumber" : {
+          "customerWorkphoneDiallingCode" : "082",
+          "customerWorkphoneNumber" : "1234361"
+        },
+        "faxNumber" : {
+          "customerFaxphoneDiallingCode" : "082",
+          "customerFaxphoneNumber" : "1234361"
+        }
+      },
+      "contactCommercialData" : {
+        "customerContactTitle" : "",
+        "customerContactName" : "",
+        "businessPhoneNumber" : {
+          "customerContactphoneDiallingCode" : "",
+          "customerContactphoneNumber" : ""
+        },
+        "businessFaxNumber" : {
+          "customerBusinessphoneDiallingCode" : "",
+          "customerBusinessphoneNumber" : ""
+        }
+      },
+      "residentialAddressData" : { },
+      "mailingAddressData" : { },
+      "qualificationEmployerDetails" : {
+        "customerEmployerName" : "WORK FOR THE CDCMAN",
+        "customerPeriodEmployed" : 120,
+        "customerHighestQualification" : "G12",
+        "customerQualificationSpecialty" : "",
+        "customerDateQualified" : 0,
+        "customerQualificationDuration" : 0,
+        "customerProofOfDegree" : ""
+      },
+      "marketingCommonData" : {
+        "customerFNBMarketingConsent" : "",
+        "customerFRBMarketingConsent" : "N",
+        "customerThirdPartyConsent" : "",
+        "customerMarketingViaCell" : "",
+        "customerMarketingViaPhone" : "",
+        "customerMarketingViaSMS" : "",
+        "customerMarketingViaEmail" : "",
+        "customerMarketingViaPost" : ""
+      },
+      "segmentationCommonData" : {
+        "customerPrimarySegmentation" : "MS0",
+        "customerSecondarySegmentation" : "MS0"
+      }
+    }
+  }
+}

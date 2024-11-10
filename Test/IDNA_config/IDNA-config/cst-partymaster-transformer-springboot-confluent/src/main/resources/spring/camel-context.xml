@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xmlns:http="http://cxf.apache.org/transports/http/configuration"
+       xmlns:sec="http://cxf.apache.org/configuration/security"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring       http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://camel.apache.org/schema/cxf   http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/transports/http/configuration     http://cxf.apache.org/schemas/configuration/http-conf.xsd
+       http://cxf.apache.org/configuration/security     http://cxf.apache.org/schemas/configuration/security.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <context:property-placeholder location="file:/deployments/etc/properties.cfg"/>
+    <bean class="za.co.fnb.idna.AvroRecord" id="recordCreate"/>
+
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+        <propertyPlaceholder id="properties" location="file:/deployments/etc/properties.cfg"/>
+        <dataFormats>
+            <json />
+        </dataFormats>
+        <route id="fuse-app-kafka-to-db-route">
+            <from id="kafka_consumer" uri="kafka:{{kafka.consumer.topic}}?brokers={{kafka.brokers}}&amp;autoOffsetReset={{kafka.auto.offset.reset}}&amp;groupId={{kafka.group.id}}&amp;
+                clientId={{kafka.consumer.client.id}}&amp;keyDeserializer={{kafka.consumer.key.deserializer}}&amp;valueDeserializer={{kafka.consumer.value.deserializer}}&amp;
+                securityProtocol={{kafka.security.protocol}}&amp;saslJaasConfig={{sasl.jaas.config}}&amp;sslKeystoreLocation={{kafka.ssl.keystore.location}}&amp;
+                sslKeystorePassword={{kafka.ssl.keystore.password}}&amp;sslTruststoreLocation={{kafka.ssl.truststore.location}}&amp;sslTruststorePassword={{kafka.ssl.truststore.password}}
+                &amp;schemaRegistryURL={{schema.reg.url}}"/>
+            <log id="kafka_consumer_log" message="Got message from kafka \n ${body}" loggingLevel="INFO"/>
+            <to uri="freemarker:{{template.location}}" />
+            <to id="_avro1" uri="bean:recordCreate?method=kafkaRecord({{schema.location}},${body})"/>
+            <log id="freemarker_log" message="Template Object \n ${body}" loggingLevel="INFO"/>
+            <to id="kafka_producer" uri="kafka:{{kafka.producer.topic}}?brokers={{kafka.brokers}}&amp;
+                valueSerializer={{kafka.producer.value.serializer}}&amp;
+                securityProtocol={{kafka.security.protocol}}&amp;saslJaasConfig={{sasl.jaas.config}}&amp;
+                sslKeystoreLocation={{kafka.ssl.keystore.location}}&amp;
+                sslKeystorePassword={{kafka.ssl.keystore.password}}&amp;
+                sslTruststoreLocation={{kafka.ssl.truststore.location}}&amp;
+                sslTruststorePassword={{kafka.ssl.truststore.password}}&amp;
+                schemaRegistryURL={{schema.reg.url}}&amp;
+                additionalProperties.basic.auth.credentials.source=USER_INFO&amp;
+                additionalProperties.schema.registry.basic.auth.user.info={{source.credentials}}&amp;
+                additionalProperties.schema.registry.ssl.truststore.location={{truststore.location}}&amp;
+                additionalProperties.schema.registry.ssl.truststore.password={{truststore.password}}&amp;
+                additionalProperties.schema.registry.ssl.truststore.type=JKS&amp;
+                additionalProperties.schema.registry.ssl.keystore.location={{keystore.location}}&amp;
+                additionalProperties.schema.registry.ssl.keystore.password={{keystore.password}}&amp;
+                additionalProperties.schema.registry.ssl.keystore.type=JKS"/>
+            <log id="producer" message="Producer results \n ${body}" loggingLevel="INFO"/>
+        </route>
+    </camelContext>
+</beans>

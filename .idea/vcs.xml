@@ -4,7 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/InetrviewGuideCodeTest/java Interview quetion/JavaInterviewQuestionsAndAnswers" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/InetrviewGuideCodeTest/sping Inetrview/spring-interview-guide" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/doc/sping Inetrview/spring-interview-guide" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kuberneties/Kubernetesmicro/sample-spring-microservices-new" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kuberneties/kubernetes-course" vcs="Git" />
   </component>

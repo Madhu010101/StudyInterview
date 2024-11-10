@@ -1,0 +1,9 @@
+id,keyidentifiernumber,error_description,date
+752,bec937c3-42ea-4129-b06b-1d282e9e8ff1,401 Unauthorized: [no body],2022/12/06 17:14
+1501,086e5cb6-aa22-4929-b2d4-aa69e6869ddb,401 Unauthorized: [no body],2022/12/07 12:32
+1751,086e5cb6-aa22-4929-b2d4-aa69e6869ddb,401 Unauthorized: [no body],2022/12/07 13:08
+2251,852c71b0-19f8-4599-b3a6-4e13b41d3eb9,401 Unauthorized: [no body],2022/12/07 13:46
+2252,61d6c3d8-51ce-4b3e-a888-3514579190c8,401 Unauthorized: [no body],2022/12/07 13:50
+2504,2cdc4346-5581-40b0-92d9-429eb3c7f919,"403 Forbidden: [{
+  ""message"":""You cannot consume this service""
+}]",2022/12/08 12:58

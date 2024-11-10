@@ -1,0 +1,92 @@
+spec:
+  replicas: 1
+  template:
+    spec:
+      volumes:
+        - name: idna-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-transformer-configmap
+        - name: partymaster-schema-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-schema-configmap
+        - name: partymaster-freemarker-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-freemarker-configmap
+        - name: graylog-config
+          configMap:
+            defaultMode: 420
+            name: graylog-configmap
+        - name: krb5-config
+          configMap:
+            name: krb5-config
+        - name: kafka-jaas-partymaster
+          configMap:
+            name: kafka-jaas-partymaster
+        - name: cst-dmg-qa-keytab
+          secret:
+            secretName: svc-cuscache-qa-keytab
+      containers:
+        -
+          env:
+            - name: TZ
+              value: Africa/Johannesburg
+            - name: JAVA_OPTS
+              value: >-
+                -Djava.security.krb5.conf=/etc/krb5.conf 
+                -Djava.security.auth.login.config=/deployments/karaf/etc/kafka.jaas
+          ports:
+            - containerPort: 9090
+              name: schemareg
+              protocol: TCP
+          volumeMounts:
+          - name: idna-config
+            mountPath: /deployments/karaf/etc/properties.cfg
+            subPath: properties.cfg
+          - mountPath: /etc/krb5.conf
+            name: krb5-config
+            subPath: krb5.conf
+          - name: kafka-jaas-partymaster
+            mountPath: /deployments/karaf/etc/kafka.jaas
+            subPath: kafka.jaas
+          - mountPath: /deployments/karaf/etc/SVC_CST_CusCache_uat.keytab
+            name: cst-dmg-qa-keytab
+            subPath: SVC_CST_CusCache_uat.keytab
+            readOnly: true
+          - name: partymaster-schema-config
+            mountPath: /deployments/karaf/etc/partymasterSourceBusinessObject.avsc
+            subPath: partymasterSourceBusinessObject.avsc
+          - name: partymaster-freemarker-config
+            mountPath: /deployments/karaf/etc/transform.ftl
+            subPath: transform.ftl
+          - name: graylog-config
+            mountPath: /deployments/karaf/etc/org.ops4j.pax.logging.cfg
+            subPath: org.ops4j.pax.logging.cfg
+      dnsPolicy: ClusterFirst
+      hostAliases:
+        - hostnames:
+            - dna-rbeehskaf01.fnb.co.za
+          ip: 172.16.35.66
+        - hostnames:
+            - dna-r1eehskaf02.fnb.co.za
+          ip: 172.16.35.67
+        - hostnames:
+            - dna-r1eehskaf03.fnb.co.za
+          ip: 172.16.35.64
+        - hostnames:
+            - dna-r1eehsdoc01.fnb.co.za
+          ip: 172.16.35.96
+        - hostnames:
+            - dna-r1eehcskaf01.fnb.co.za
+          ip: 172.16.35.109
+        - hostnames:
+            - dna-r1eehcskaf02.fnb.co.za
+          ip: 172.16.35.110
+        - hostnames:
+            - dna-r1eehcskaf03.fnb.co.za
+          ip: 172.16.35.111
+        - hostnames:
+            - dna-r1eehcsamb01.fnb.co.za
+          ip: 172.16.35.106

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: template
+data:
+  transform.ftl: >-
+      <#setting datetime_format="iso">
+      <#setting date_format="iso">
+      {"uuid": "${body.uuid!""}","cd_source_chanel": "${body.cd_source_chanel!""}","cd_int_channel": "${body.cd_int_channel!""}","channel_type_value": "${body.channel_type_value!""}","event": "${body.event!""}","event_Description": "${body.event_Description!""}","event_Date": "${body.event_Date?datetime('yyyy/MM/dd HH:mm:ss')!""}","fr_Doc_Ref": "${body.fr_Doc_Ref!""}","fr_Create_Split_Ref": "${body.fr_Create_Split_Ref?j_string!""}","cd_docname": "${body.cd_docname!""}","fr_ucn": "${body.fr_ucn!""}","r_object_id": "${body.r_object_id!""}","cd_status": "${body.cd_status!""}","cd_product_info": "${body.cd_product_info!""}", "originating_id" : "${body.originating_id!""}","fr_acc": "${body.fr_acc!""}","fr_id": "${body.fr_id!""}","cd_id_type": "${body.cd_id_type!""}","cd_company": "${body.cd_company!""}","cd_branch": "${body.cd_branch!""}","cd_doctype": "${body.cd_doctype!""}","content_type": "${body.content_type!""}","fr_create_doc_d": "${body.fr_create_doc_d!""}","fr_create_user": "${body.fr_create_user?j_string!""}","fr_expire_doc_d": "${body.fr_expire_doc_d!""}","fr_issue_d": "${body.fr_issue_d!""}","fr_last_modified_user": "${body.fr_last_modified_user?j_string!""}","r_modify_d": "${body.r_modify_d?date('yyyyMMdd')!""}","theme": "${body.theme!""}","systemUser": "${body.systemUser!""}","entityId": "${body.entityId!""}","entityType": "${body.entityType!""}"}

@@ -1,0 +1,59 @@
+Identificatio[
+
+nameEntpsTypeCode  = 1
+identificationNameAttributeName = "firstname"
+identificationNameValue = madhavi  customerFirstName
+
+nameEntpsTypeCode  = 2
+identificationNameAttributeName = "middlename"  customerMiddleNameFirst
+identificationNameValue =      
+
+nameEntpsTypeCode  = 2
+identificationNameAttributeName = "middlename"  customerMiddleNameFirst
+identificationNameValue = 
+
+nameEntpsTypeCode  = 2
+identificationNameAttributeName = "middlename"  customerMiddleNameFirst
+identificationNameValue = 
+
+nameEntpsTypeCode  = 2
+identificationNameAttributeName = "middlename"  customerMiddleNameFirst
+identificationNameValue = 
+
+nameEntpsTypeCode  = 3
+identificationNameAttributeName = "lastname"  customerLastName
+identificationNameValue =powar
+
+]
+
+nameEntpsTypeCode  = 1
+identificationNameAttributeName = middle
+identificationNameValue = qu
+
+nameEntpsTypeCode  = 2
+identificationNameAttributeName = middle
+identificationNameValue =
+
+nameEntpsTypeCode  = 3
+identificationNameAttributeName = lastname 
+identificationNameValue =powar
+
+first = madhavi  enquiry
+secondname = "" enquiry 
+lastname = powar
+
+customerFullName
+
+
+case 1 "evrything blanck" enquiry
+case 2 one filed populated we pull from FID 
+case 3
+
+firstName.set(identification.getIdentificationNames().stream().filter(i->i.getIdentificationNameAttributeName().equalsIgnoreCase("firstName")||i.getIdentificationNameAttributeName().equalsIgnoreCase("surname")).map(i->i.getIdentificationNameValue()).collect(Collectors.joining("")));
+middleName.set(identification.getIdentificationNames().stream().filter(i->i.getIdentificationNameAttributeName().equalsIgnoreCase("middleNames")).map(i->i.getIdentificationNameValue()).collect(Collectors.joining("")));
+surName.set(identification.getIdentificationNames().stream().filter(i->i.getIdentificationNameAttributeName().equalsIgnoreCase("sureName")).map(i->i.getIdentificationNameValue()).collect(Collectors.joining("")));
+
+
+
+
+{"eventHeader":{"correlations":[{"correlationName":"eventUUID","correlationValue":"a5c18aec-41d5-4a13-86b2-571c9462db38"}],"eventAction":"u","eventArchContext":"consume+event","eventDateTime":"2023-01-11T09:51:10.859422+02:00","eventOrigins":[{"eventOriginName":"za.int.raw.opm.firstidmasterentity.1","eventOriginSourceSystemCode":"CRE","eventOriginType":"topic"}],"eventUUID":"40442163-24af-4080-916a-3f8ef848b07f CRE-1-ZA-1-949898-3","sourceSystemCode":"OPM"},"key":{"keyCompanyEntpsTypeCode":"-2","keyIdentifierEntpsTypeCode":"4","keyIdentifierJurisdictionId":52,"keyIdentifierNumber":"devtest","keyIdentifierSystemEntpsTypeCode":"OPM","keyJurisdictionCountryEntpsCode":"-2"},"party":{"container":null,"conversationLanguageEntpsTypeCode":"-2","correspondenceLanguageEntpsTypeCode":"1","homeLanguageEntpsTypeCode":"-2","identifications":[{"citizenshipCountryEntpsCode": "11", "identificationBarcodeNumber": null, "identificationEntpsTypeCode": "43", "identificationExpiryDate": "20991231", "identificationIssueDate": "19000101", "identificationIssuerCountryEntpsCode": "ZA","identificationIssuerEntpsTypeCode": "-2","identificationNames": [], "identificationNumber": "8203056648266", "identificationReferenceNumber": null, "identificationStatusDate": null, "identificationStatusEntpsTypeCode": "-2", "residencyStatusEntpsTypeCode": "5"},{"citizenshipCountryEntpsCode": "11", "identificationBarcodeNumber": null, "identificationEntpsTypeCode": "5", "identificationExpiryDate": "20991231", "identificationIssueDate": "19000101", "identificationIssuerCountryEntpsCode": "ZA","identificationIssuerEntpsTypeCode": "-2","identificationNames": [], "identificationNumber": "8203056648266", "identificationReferenceNumber": null, "identificationStatusDate": null, "identificationStatusEntpsTypeCode": "-2", "residencyStatusEntpsTypeCode": "5"},{"citizenshipCountryEntpsCode": "2012", "identificationBarcodeNumber": null, "identificationEntpsTypeCode": "12", "identificationExpiryDate": "20991231", "identificationIssueDate": "19000101", "identificationIssuerCountryEntpsCode": "ZA","identificationIssuerEntpsTypeCode": "-2","identificationNames": [], "identificationNumber": "8203056648266", "identificationReferenceNumber": null, "identificationStatusDate": null, "identificationStatusEntpsTypeCode": "-2", "residencyStatusEntpsTypeCode": "1123"},{"citizenshipCountryEntpsCode": "11", "identificationBarcodeNumber": null, "identificationEntpsTypeCode": "9", "identificationExpiryDate": "20991231", "identificationIssueDate": "19000101", "identificationIssuerCountryEntpsCode": "ZA","identificationIssuerEntpsTypeCode": "-2","identificationNames": [], "identificationNumber": "8203056648266", "identificationReferenceNumber": null, "identificationStatusDate": null, "identificationStatusEntpsTypeCode": "-2", "residencyStatusEntpsTypeCode": "5"}],"partyClassification":[{"partyClassificationTypeCode":"1","partyClassificationAttributeName":null,"partyClassificationValue":"0"}],"identifiers":[{"companyEntpsTypeCode":"1","identifierEndDate":null,"identifierEntpsTypeCode":"2","identifierNumber":"0","identifierStartDate":"20200424","identifierStatusEntpsTypeCode":"1","identifierSystemEntpsTypeCode":"CIS","jurisdictionCountryEntpsCode":"ZA","jurisdictionId":1,"roleEntpsTypeCode":"1"}],"individual":{"birthCityName":"JHBANNESBURG","birthCountryEntpsCode":"ZA","birthDate":"19840705","deceasedDate":null,"educations":[{"highestQualificationEntpsTypeCode":"2","qualificationDate":"20180426","qualificationSpecialityEntpsTypeCode":"6","qualificationStartDate":null,"qualificationProofIndicator":"YES"}],"employments":[{"annualGrossIncomeAmount":null,"employerName":"PLACE OF WORK","employmentEndDate":null,"employmentStartDate":null,"occupationEntpsTypeCode":"2019221"}],"genderEntpsTypeCode":"1","maritalConsentIndicator":null,"maritalContractEntpsTypeCode":"2","maritalStatusEntpsTypeCode":"2","nationalityCountryEntpsCode":"ZA","numberOfDependants":0,"permanentResidenceCountryEntpsCode":"ZA","titleEntpsTypeCode":"112"},"locations":[{"allArrangementStatementAddressIndicator":null,"digitalAddresses":[],"emailAddresses":[],"geographicAddresses":[{"addressEntpsTypeCode":"-2","addressLine1":"Mumbai","addressLine2":"18184 RED CURRENT STREET","buildingName":"nature valley","careOfName":null,"cityName":"SOWETO","complexName":null,"countryEntpsCode":"ZA","floorNumber":null,"postalAreaNumber":"1819","stateDistrictProvinceEntpsTypeCode":"ZA-EC","stateDistrictProvinceName":null,"streetName":null,"streetNumber":null,"subAreaName":null,"suburbName":"PROTEA","suiteName":null,"unitNumber":null,"googlePlusCode":null}],"locationEntpsTypeCode":"1","locationTag":null,"locationUseEntpsTypeCode":"5","telephonicAddresses":[]},{"allArrangementStatementAddressIndicator":null,"digitalAddresses":[],"emailAddresses":[],"geographicAddresses":[],"locationEntpsTypeCode":"2","locationTag":null,"locationUseEntpsTypeCode":"16","telephonicAddresses":[{"telephoneAreaDailCode":"200","telephoneCountryDailCode":"2","telephoneEntpsTypeCode":"-2","telephoneExtensionNumber":null,"telephoneFullNumber":"012Z2210722","telephoneNumber":"9867453211"}]},{"allArrangementStatementAddressIndicator":null,"digitalAddresses":[],"emailAddresses":[],"geographicAddresses":[],"locationEntpsTypeCode":"2","locationTag":null,"locationUseEntpsTypeCode":"17","telephonicAddresses":[{"telephoneAreaDailCode":"100","telephoneCountryDailCode":"2","telephoneEntpsTypeCode":"-2","telephoneExtensionNumber":null,"telephoneFullNumber":"2778Z0215500","telephoneNumber":"888999"}]},{"allArrangementStatementAddressIndicator":null,"digitalAddresses":[],"emailAddresses":[],"geographicAddresses":[],"locationEntpsTypeCode":"2","locationTag":null,"locationUseEntpsTypeCode":"21","telephonicAddresses":[{"telephoneAreaDailCode":"200","telephoneCountryDailCode":"1","telephoneEntpsTypeCode":"-2","telephoneExtensionNumber":null,"telephoneFullNumber":"011Z2210722","telephoneNumber":null}]},{"allArrangementStatementAddressIndicator":null,"digitalAddresses":[],"emailAddresses":[{"emailAddress":"TDT@TESTDATA.CO.ZA"}],"geographicAddresses":[],"locationEntpsTypeCode":"3","locationTag":null,"locationUseEntpsTypeCode":"19","telephonicAddresses":[]}],"name":"Ms CatWoman1","organisation":null,"partyCreatedDate":null,"partyEntpsTypeCode":"01","partyStatusDate":null,"partyStatusEntpsTypeCode":"-2","profileRegistrationName":null,"sourcesOfFunds":[{"sourceOfFundsAmount":null,"sourceOfFundsDate":"20220801","sourceOfFundsEntpsTypeCode":"18"},{"sourceOfFundsAmount":null,"sourceOfFundsDate":"20220801","sourceOfFundsEntpsTypeCode":"10"},{"sourceOfFundsAmount":null,"sourceOfFundsDate":"20220801","sourceOfFundsEntpsTypeCode":"1"},{"sourceOfFundsAmount":null,"sourceOfFundsDate":"20220801","sourceOfFundsEntpsTypeCode":"4"},{"sourceOfFundsAmount":null,"sourceOfFundsDate":"20220801","sourceOfFundsEntpsTypeCode":"5"}],"takeOnAttributes":[{"attributeName":"primarySegment","attributeValquue":"CM0"}]}}

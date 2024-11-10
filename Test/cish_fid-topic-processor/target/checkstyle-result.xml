@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\projects\CustomerCache\source\FID_consumption\cish_fid-topic-processor\src\main\java\za\co\fnb\cish\fid\topic\processor\listener\MessageListener.java">
+<error line="57" column="5" severity="warning" message="Cyclomatic Complexity is 15 (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+<error line="109" column="5" severity="warning" message="Cyclomatic Complexity is 15 (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+</file>
+</checkstyle>

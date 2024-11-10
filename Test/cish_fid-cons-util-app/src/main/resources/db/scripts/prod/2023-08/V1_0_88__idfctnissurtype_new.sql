@@ -1,0 +1,52 @@
+DROP TABLE IF EXISTS cishfid.identification_issuer_type;
+
+DROP SEQUENCE IF EXISTS cishfid.identification_issuer_type_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS cishfid.identification_issuer_type_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 250;
+
+create table cishfid.identification_issuer_type
+(
+    id bigint NOT NULL,
+    stm_tp_cd text,
+    cmpny_tp_cd integer,
+    src_tbl_no integer,
+    src_tbl_nme text,
+    src_cat text,
+    idfctn_issur_src_tp_cd text,
+    idfctn_issur_src_tp_desc text,
+    tbl_nme text,
+    idfctn_issur_entps_tp_cd integer,
+    idfctn_issur_entps_tp_desc text,
+    idfctn_issur_efctv_dt text,
+    idfctn_issur_expry_dt text,
+    CONSTRAINT identification_issuer_type_pkey PRIMARY KEY (id)
+);
+
+
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '1', 'DEPARTMENT OF HOME AFFAIRS', '2022-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '2', 'COMPANIES AND INTELLECTUAL PROPERTY COMMISSION', '2022-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '3', 'SOUTH AFRICAN REVENUE SERVICE', '2022-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '4', 'MASTER OF HIGH COURT:  BLOEMFONTEIN, FREE STATE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '5', 'MASTER OF HIGH COURT:  BISHO, EASTERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '6', 'MASTER OF HIGH COURT:  CAPE TOWN, WESTERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '7', 'MASTER OF HIGH COURT:  DURBAN, KWAZULU-NATAL', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '8', 'MASTER OF HIGH COURT:  GRAHAMSTOWN, EASTERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '9', 'MASTER OF HIGH COURT:  JOHANNESBURG, GAUTENG', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '10', 'MASTER OF HIGH COURT:  KIMBERLY, NORTHERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '11', 'MASTER OF HIGH COURT:  MAFIKENG, NORTH WEST', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '12', 'MASTER OF HIGH COURT:  MTHATHA, EASTERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '13', 'MASTER OF HIGH COURT:  NELSPRUIT, MPUMALANGA', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '14', 'MASTER OF HIGH COURT:  PIETERMARITZBURG, KWAZULU-NATAL', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '15', 'MASTER OF HIGH COURT:  POLOKWANE, LIMPOPO', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '16', 'MASTER OF HIGH COURT:  PORT ELIZABETH, EASTERN CAPE', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '17', 'MASTER OF HIGH COURT:  PRETORIA, GAUTENG', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '18', 'MASTER OF HIGH COURT:  THOHOYANDOU, LIMPOPO', '2023-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '-2', 'FIELD NOT APPLICABLE TO SOURCE', '2022-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '0', 'SOURCE CODE IS NOT FOUND IN LOOKUP', '2022-07-30', null);
+INSERT INTO cishfid.identification_issuer_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, idfctn_issur_src_tp_cd, idfctn_issur_src_tp_desc, tbl_nme, idfctn_issur_entps_tp_cd, idfctn_issur_entps_tp_desc, idfctn_issur_efctv_dt, idfctn_issur_expry_dt) VALUES (nextval('cishfid.identification_issuer_type_id_seq'), null, null, null, null, null, null, null, 'IDFCTN_ISSUR_TP', '-1', 'SOURCE CODE IS BLANK OR NULL', '2022-07-30', null);
+commit;

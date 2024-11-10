@@ -1,0 +1,48 @@
+server:
+  port: 9543
+  servlet:
+    context-path: /dlqmntr
+spring:
+  profiles:
+    active: dev
+  activemq:
+    app1:
+      url: failover://ssl://cit-rdtcstapp1.fnb.co.za:61617
+      jolokia-url: https://cit-rdtcstapp1:8161/api/jolokia
+      broker-name: localhost
+    app2:
+      url: failover://ssl://cit-rdtcstapp1.fnb.co.za:61617
+      jolokia-url: https://cit-rdtcstapp1:8161/api/jolokia
+      broker-name: localhost
+    broker-url:
+    user:
+    password:
+    in-memory: false
+    pool:
+      enabled: true
+    producer-window-size: 1024000
+    session-cache-size: 10
+jasypt:
+  encryptor:
+    algorithm: 
+    password: 
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+logging:
+  file:
+    max-history: 7
+    name: logs/server.log
+  level:
+    za.co.fnb : debug
+customer:
+  republish:
+    demographicQueue: dev.republish.demographic
+    productHoldingQueue: dev.republish.productholding
+  applicationPropertiesUrl: 
+  applicationResponseCodeUrl:
+
+dlq:
+  email:
+    sender: prashant.singh@fnb.co.za
+    recipients: prashant.singh@fnb.co.za
+
+dlq-queues: DLQ.int.dev.busobj.firstid.masterentity.1

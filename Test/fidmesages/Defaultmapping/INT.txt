@@ -1,0 +1,366 @@
+{"topic":"za.dev.busobj.firstid.masterentity.1","key":"5b26cff7-25ce-46be-b2b6-074f1d90c774","value":"{\"eventHeader\": {\"correlations\": [{\"correlationName\": \"eventUUID\", \"correlationValue\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\"}], \"eventAction\": \"u\", \"eventArchContext\": \"consume+event\", \"eventDateTime\": \"2024-07-25T18:35:49.946271311+02:00\", \"eventOrigins\": [{\"eventOriginName\": \"za.prod.derived.cuscache.partymastercustomer.1\", \"eventOriginSourceSystemCode\": \"CRE\", \"eventOriginType\": \"topic\"}], \"eventUUID\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\", \"sourceSystemCode\": \"OPM\"}, \"key\": {\"keyCompanyEntpsTypeCode\": \"-2\", \"keyIdentifierEntpsTypeCode\": \"4\", \"keyIdentifierJurisdictionId\": 52, \"keyIdentifierNumber\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\", \"keyIdentifierSystemEntpsTypeCode\": \"OPM\", \"keyJurisdictionCountryEntpsCode\": \"-2\"}, \"party\": {\"container\": null, \"conversationLanguageEntpsTypeCode\": \"-2\", \"correspondenceLanguageEntpsTypeCode\": \"1\", \"homeLanguageEntpsTypeCode\": \"-2\", \"identifications\": [{\"citizenshipCountryEntpsCode\": \"ZA\", \"identificationBarcodeNumber\": null, \"identificationEntpsTypeCode\": \"9\", \"identificationExpiryDate\": \"20991231\", \"identificationIssueDate\": \"20091123\", \"identificationIssuerCountryEntpsCode\": \"ZA\", \"identificationIssuerEntpsTypeCode\": \"-2\", \"identificationNames\": null, \"identificationNumber\": \"6707275164089\", \"identificationReferenceNumber\": null, \"identificationStatusDate\": null, \"identificationStatusEntpsTypeCode\": \"-2\", \"residencyStatusEntpsTypeCode\": \"6\", \"identificationActiveIndicator\": \"Y\", \"primaryIdentificationIndicator\": \"Y\"}, {\"citizenshipCountryEntpsCode\": \"ZA\", \"identificationBarcodeNumber\": null, \"identificationEntpsTypeCode\": \"9\", \"identificationExpiryDate\": \"20091122\", \"identificationIssueDate\": \"19980410\", \"identificationIssuerCountryEntpsCode\": \"ZA\", \"identificationIssuerEntpsTypeCode\": \"-2\", \"identificationNames\": null, \"identificationNumber\": \"6707275164055\", \"identificationReferenceNumber\": null, \"identificationStatusDate\": null, \"identificationStatusEntpsTypeCode\": \"-2\", \"residencyStatusEntpsTypeCode\": \"6\", \"identificationActiveIndicator\": \"Y\", \"primaryIdentificationIndicator\": \"N\"}], \"identifiers\": [{\"companyEntpsTypeCode\": \"1\", \"identifierEndDate\": null, \"identifierEntpsTypeCode\": \"2\", \"identifierNumber\": \"150\", \"identifierStartDate\": \"19930806\", \"identifierStatusEntpsTypeCode\": \"4\", \"identifierSystemEntpsTypeCode\": \"CIS\", \"jurisdictionCountryEntpsCode\": \"ZA\", \"jurisdictionId\": 1, \"roleEntpsTypeCode\": \"1\", \"identifierRoleActiveIndicator\": \"Y\"}, {\"companyEntpsTypeCode\": \"1\", \"identifierEndDate\": null, \"identifierEntpsTypeCode\": \"2\", \"identifierNumber\": \"500\", \"identifierStartDate\": \"19930806\", \"identifierStatusEntpsTypeCode\": \"1\", \"identifierSystemEntpsTypeCode\": \"CIS\", \"jurisdictionCountryEntpsCode\": \"ZA\", \"jurisdictionId\": 1, \"roleEntpsTypeCode\": \"1\", \"identifierRoleActiveIndicator\": \"N\"}, {\"companyEntpsTypeCode\": \"1\", \"identifierEndDate\": null, \"identifierEntpsTypeCode\": \"2\", \"identifierNumber\": \"150\", \"identifierStartDate\": \"19930806\", \"identifierStatusEntpsTypeCode\": \"4\", \"identifierSystemEntpsTypeCode\": \"CIS\", \"jurisdictionCountryEntpsCode\": \"ZA\", \"jurisdictionId\": 1, \"roleEntpsTypeCode\": \"1\", \"identifierRoleActiveIndicator\": \"Y\"}], \"individual\": {\"birthCityName\": \"DURBAN\", \"birthCountryEntpsCode\": \"ZA\", \"birthDate\": \"19670727\", \"deceasedDate\": null, \"educations\": [{\"highestQualificationEntpsTypeCode\": null, \"qualificationDate\": null, \"qualificationSpecialityEntpsTypeCode\": \"\", \"qualificationProofIndicator\": \"\", \"qualificationStartDate\": null, \"educationActiveIndicator\": \"Y\"}], \"employments\": [{\"annualGrossIncomeAmount\": 5000.0, \"employerName\": null, \"employmentEndDate\": null, \"employmentStartDate\": null, \"occupationEntpsTypeCode\": null, \"employmentActiveIndicator\": \"Y\", \"primaryEmploymentIndicator\": \"Y\", \"nettIncomeAmount\": null, \"nettIncomeCurrencyEntpsTypeCode\": \"-2\", \"nettIncomeFrequencyEntpsTypeCode\": \"-2\", \"nettIncomePaymentDay\": null, \"employmentStatusEntpsTypeCode\": \"-2\"}], \"genderEntpsTypeCode\": null, \"maritalConsentIndicator\": null, \"maritalContractEntpsTypeCode\": null, \"maritalStatusEntpsTypeCode\": null, \"nationalityCountryEntpsCode\": \"ZA\", \"numberOfDependants\": null, \"permanentResidenceCountryEntpsCode\": \"ZA\", \"titleEntpsTypeCode\": \"107\"}, \"locations\": [{\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [], \"geographicAddresses\": [{\"addressEntpsTypeCode\": \"-2\", \"addressLine1\": \"\", \"addressLine2\": \"12 ETTRICK RD\", \"buildingName\": null, \"careOfName\": null, \"cityName\": \"BLUFF\", \"complexName\": null, \"countryEntpsCode\": \"ZA\", \"floorNumber\": null, \"postalAreaNumber\": \"4052\", \"stateDistrictProvinceEntpsTypeCode\": \"-1\", \"stateDistrictProvinceName\": \"\", \"streetName\": null, \"streetNumber\": null, \"subAreaName\": null, \"suburbName\": \"\", \"suiteName\": null, \"unitNumber\": null, \"googlePlusCode\": null}], \"locationEntpsTypeCode\": \"1\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"5\", \"telephonicAddresses\": []}, {\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [], \"geographicAddresses\": [], \"locationEntpsTypeCode\": \"2\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"16\", \"telephonicAddresses\": [{\"telephoneAreaDailCode\": null, \"telephoneCountryDailCode\": null, \"telephoneEntpsTypeCode\": \"-2\", \"telephoneExtensionNumber\": null, \"telephoneFullNumber\": \"084Z4396442\", \"telephoneNumber\": null}]}, {\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [], \"geographicAddresses\": [], \"locationEntpsTypeCode\": \"2\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"17\", \"telephonicAddresses\": [{\"telephoneAreaDailCode\": null, \"telephoneCountryDailCode\": null, \"telephoneEntpsTypeCode\": \"-2\", \"telephoneExtensionNumber\": null, \"telephoneFullNumber\": \"084Z4396442\", \"telephoneNumber\": null}]}, {\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [], \"geographicAddresses\": [], \"locationEntpsTypeCode\": \"2\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"21\", \"telephonicAddresses\": [{\"telephoneAreaDailCode\": null, \"telephoneCountryDailCode\": null, \"telephoneEntpsTypeCode\": \"-2\", \"telephoneExtensionNumber\": null, \"telephoneFullNumber\": \"031Z4671627\", \"telephoneNumber\": null}]}, {\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [{\"emailAddress\": \"ZU.MAHOMED@GMAIL.COM\"}], \"geographicAddresses\": [], \"locationEntpsTypeCode\": \"3\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"19\", \"telephonicAddresses\": []}, {\"locationActiveIndicator\": \"Y\", \"allArrangementStatementAddressIndicator\": null, \"digitalAddresses\": [], \"emailAddresses\": [], \"geographicAddresses\": [{\"addressEntpsTypeCode\": \"-2\", \"addressLine1\": null, \"addressLine2\": \"102 OLD MAIN RD\", \"buildingName\": null, \"careOfName\": null, \"cityName\": \"ISIPINGO\", \"complexName\": null, \"countryEntpsCode\": \"ZA\", \"floorNumber\": null, \"postalAreaNumber\": \"4133\", \"stateDistrictProvinceEntpsTypeCode\": \"-1\", \"stateDistrictProvinceName\": \"\", \"streetName\": null, \"streetNumber\": null, \"subAreaName\": null, \"suburbName\": \"\", \"suiteName\": null, \"unitNumber\": null, \"googlePlusCode\": null}], \"locationEntpsTypeCode\": \"1\", \"locationTag\": \"\", \"locationUseEntpsTypeCode\": \"3\", \"telephonicAddresses\": []}], \"name\": \"MR MAHOMED Z MAHOMED ZUBAIR\", \"organisation\": null, \"partyCreatedDate\": null, \"partyEntpsTypeCode\": \"1\", \"partyStatusDate\": null, \"partyStatusEntpsTypeCode\": \"1\", \"profileRegistrationName\": null, \"sourcesOfFunds\": [{\"sourceOfFundsAmount\": 0, \"sourceOfFundsDate\": \"20240715\", \"sourceOfFundsEntpsTypeCode\": \"10\", \"sourceOfFundsActiveIndicator\": \"Y\", \"sourceOfFundsCurrencyEntpsTypeCode\": \"-1\", \"sourceOfFundsFrequencyEntpsTypeCode\": \"-1\", \"sourceOfFundsPaymentDay\": null, \"primarySourceOfFundsIndicator\": null}], \"takeOnAttributes\": [], \"partyClassifications\": [{\"partyClassificationTypeCode\": \"1\", \"partyClassificationAttributeName\": \"depositTakingInstitutionEntpsTypeCode\", \"partyClassificationValue\": \"8\", \"partyClassificationActiveIndicator\": \"Y\"}]}}"}
+
+
+
+{
+  \"eventHeader\": {
+    \"correlations\": [
+      {
+        \"correlationName\": \"eventUUID\",
+        \"correlationValue\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\"
+      }
+    ],
+    \"eventAction\": \"u\",
+    \"eventArchContext\": \"consume+event\",
+    \"eventDateTime\": \"2024-07-25T18: 35: 49.946271311+02: 00\",
+    \"eventOrigins\": [
+      {
+        \"eventOriginName\": \"za.prod.derived.cuscache.partymastercustomer.1\",
+        \"eventOriginSourceSystemCode\": \"CRE\",
+        \"eventOriginType\": \"topic\"
+      }
+    ],
+    \"eventUUID\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\",
+    \"sourceSystemCode\": \"OPM\"
+  },
+  \"key\": {
+    \"keyCompanyEntpsTypeCode\": \"-2\",
+    \"keyIdentifierEntpsTypeCode\": \"4\",
+    \"keyIdentifierJurisdictionId\": 52,
+    \"keyIdentifierNumber\": \"d3f6bd66-1ee1-43f5-8201-093d3f48b7af\",
+    \"keyIdentifierSystemEntpsTypeCode\": \"OPM\",
+    \"keyJurisdictionCountryEntpsCode\": \"-2\"
+  },
+  \"party\": {
+    \"container\": null,
+    \"conversationLanguageEntpsTypeCode\": \"-2\",
+    \"correspondenceLanguageEntpsTypeCode\": \"1\",
+    \"homeLanguageEntpsTypeCode\": \"-2\",
+    \"identifications\": [
+      {
+        \"citizenshipCountryEntpsCode\": \"ZA\",
+        \"identificationBarcodeNumber\": null,
+        \"identificationEntpsTypeCode\": \"9\",
+        \"identificationExpiryDate\": \"20991231\",
+        \"identificationIssueDate\": \"20091123\",
+        \"identificationIssuerCountryEntpsCode\": \"ZA\",
+        \"identificationIssuerEntpsTypeCode\": \"-2\",
+        \"identificationNames\": null,
+        \"identificationNumber\": \"6707275164089\",
+        \"identificationReferenceNumber\": null,
+        \"identificationStatusDate\": null,
+        \"identificationStatusEntpsTypeCode\": \"-2\",
+        \"residencyStatusEntpsTypeCode\": \"6\",
+        \"identificationActiveIndicator\": \"Y\",
+        \"primaryIdentificationIndicator\": \"Y\"
+      },
+      {
+        \"citizenshipCountryEntpsCode\": \"ZA\",
+        \"identificationBarcodeNumber\": null,
+        \"identificationEntpsTypeCode\": \"9\",
+        \"identificationExpiryDate\": \"20091122\",
+        \"identificationIssueDate\": \"19980410\",
+        \"identificationIssuerCountryEntpsCode\": \"ZA\",
+        \"identificationIssuerEntpsTypeCode\": \"-2\",
+        \"identificationNames\": null,
+        \"identificationNumber\": \"6707275164055\",
+        \"identificationReferenceNumber\": null,
+        \"identificationStatusDate\": null,
+        \"identificationStatusEntpsTypeCode\": \"-2\",
+        \"residencyStatusEntpsTypeCode\": \"6\",
+        \"identificationActiveIndicator\": \"Y\",
+        \"primaryIdentificationIndicator\": \"N\"
+      }
+    ],
+    \"identifiers\": [
+      {
+        \"companyEntpsTypeCode\": \"1\",
+        \"identifierEndDate\": null,
+        \"identifierEntpsTypeCode\": \"2\",
+        \"identifierNumber\": \"4007254\",
+        \"identifierStartDate\": \"19930806\",
+        \"identifierStatusEntpsTypeCode\": \"4\",
+        \"identifierSystemEntpsTypeCode\": \"CIS\",
+        \"jurisdictionCountryEntpsCode\": \"ZA\",
+        \"jurisdictionId\": 1,
+        \"roleEntpsTypeCode\": \"1\",
+        \"identifierRoleActiveIndicator\": \"Y\"
+      },
+      {
+        \"companyEntpsTypeCode\": \"1\",
+        \"identifierEndDate\": null,
+        \"identifierEntpsTypeCode\": \"2\",
+        \"identifierNumber\": \"4007254\",
+        \"identifierStartDate\": \"19930806\",
+        \"identifierStatusEntpsTypeCode\": \"1\",
+        \"identifierSystemEntpsTypeCode\": \"CIS\",
+        \"jurisdictionCountryEntpsCode\": \"ZA\",
+        \"jurisdictionId\": 1,
+        \"roleEntpsTypeCode\": \"1\",
+        \"identifierRoleActiveIndicator\": \"N\"
+      },
+      {
+        \"companyEntpsTypeCode\": \"1\",
+        \"identifierEndDate\": null,
+        \"identifierEntpsTypeCode\": \"2\",
+        \"identifierNumber\": \"4007248\",
+        \"identifierStartDate\": \"19930806\",
+        \"identifierStatusEntpsTypeCode\": \"1\",
+        \"identifierSystemEntpsTypeCode\": \"CIS\",
+        \"jurisdictionCountryEntpsCode\": \"ZA\",
+        \"jurisdictionId\": 1,
+        \"roleEntpsTypeCode\": \"1\",
+        \"identifierRoleActiveIndicator\": \"Y\"
+      }
+    ],
+    \"individual\": {
+      \"birthCityName\": \"DURBAN\",
+      \"birthCountryEntpsCode\": \"ZA\",
+      \"birthDate\": \"19670727\",
+      \"deceasedDate\": null,
+      \"educations\": [
+        {
+          \"highestQualificationEntpsTypeCode\": \"6\",
+          \"qualificationDate\": null,
+          \"qualificationSpecialityEntpsTypeCode\": \"-1\",
+          \"qualificationProofIndicator\": \"\",
+          \"qualificationStartDate\": null,
+          \"educationActiveIndicator\": \"Y\"
+        }
+      ],
+      \"employments\": [
+        {
+          \"annualGrossIncomeAmount\": 5000.0,
+          \"employerName\": \"UNEMPLOYED\",
+          \"employmentEndDate\": null,
+          \"employmentStartDate\": null,
+          \"occupationEntpsTypeCode\": \"64\",
+          \"employmentActiveIndicator\": \"Y\",
+          \"primaryEmploymentIndicator\": \"Y\",
+          \"nettIncomeAmount\": null,
+          \"nettIncomeCurrencyEntpsTypeCode\": \"-2\",
+          \"nettIncomeFrequencyEntpsTypeCode\": \"-2\",
+          \"nettIncomePaymentDay\": null,
+          \"employmentStatusEntpsTypeCode\": \"-2\"
+        }
+      ],
+      \"genderEntpsTypeCode\": \"2\",
+      \"maritalConsentIndicator\": \"Y\",
+      \"maritalContractEntpsTypeCode\": \"3\",
+      \"maritalStatusEntpsTypeCode\": \"2\",
+      \"nationalityCountryEntpsCode\": \"ZA\",
+      \"numberOfDependants\": 2,
+      \"permanentResidenceCountryEntpsCode\": \"ZA\",
+      \"titleEntpsTypeCode\": \"107\"
+    },
+    \"locations\": [
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          
+        ],
+        \"geographicAddresses\": [
+          {
+            \"addressEntpsTypeCode\": \"-2\",
+            \"addressLine1\": \"\",
+            \"addressLine2\": \"12ETTRICKRD\",
+            \"buildingName\": null,
+            \"careOfName\": null,
+            \"cityName\": \"BLUFF\",
+            \"complexName\": null,
+            \"countryEntpsCode\": \"ZA\",
+            \"floorNumber\": null,
+            \"postalAreaNumber\": \"4052\",
+            \"stateDistrictProvinceEntpsTypeCode\": \"-1\",
+            \"stateDistrictProvinceName\": \"\",
+            \"streetName\": null,
+            \"streetNumber\": null,
+            \"subAreaName\": null,
+            \"suburbName\": \"\",
+            \"suiteName\": null,
+            \"unitNumber\": null,
+            \"googlePlusCode\": null
+          }
+        ],
+        \"locationEntpsTypeCode\": \"1\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"5\",
+        \"telephonicAddresses\": [
+          
+        ]
+      },
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          
+        ],
+        \"geographicAddresses\": [
+          
+        ],
+        \"locationEntpsTypeCode\": \"2\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"16\",
+        \"telephonicAddresses\": [
+          {
+            \"telephoneAreaDailCode\": null,
+            \"telephoneCountryDailCode\": null,
+            \"telephoneEntpsTypeCode\": \"-2\",
+            \"telephoneExtensionNumber\": null,
+            \"telephoneFullNumber\": \"084Z4396442\",
+            \"telephoneNumber\": null
+          }
+        ]
+      },
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          
+        ],
+        \"geographicAddresses\": [
+          
+        ],
+        \"locationEntpsTypeCode\": \"2\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"17\",
+        \"telephonicAddresses\": [
+          {
+            \"telephoneAreaDailCode\": null,
+            \"telephoneCountryDailCode\": null,
+            \"telephoneEntpsTypeCode\": \"-2\",
+            \"telephoneExtensionNumber\": null,
+            \"telephoneFullNumber\": \"084Z4396442\",
+            \"telephoneNumber\": null
+          }
+        ]
+      },
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          
+        ],
+        \"geographicAddresses\": [
+          
+        ],
+        \"locationEntpsTypeCode\": \"2\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"21\",
+        \"telephonicAddresses\": [
+          {
+            \"telephoneAreaDailCode\": null,
+            \"telephoneCountryDailCode\": null,
+            \"telephoneEntpsTypeCode\": \"-2\",
+            \"telephoneExtensionNumber\": null,
+            \"telephoneFullNumber\": \"031Z4671627\",
+            \"telephoneNumber\": null
+          }
+        ]
+      },
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          {
+            \"emailAddress\": \"ZU.MAHOMED@GMAIL.COM\"
+          }
+        ],
+        \"geographicAddresses\": [
+          
+        ],
+        \"locationEntpsTypeCode\": \"3\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"19\",
+        \"telephonicAddresses\": [
+          
+        ]
+      },
+      {
+        \"locationActiveIndicator\": \"Y\",
+        \"allArrangementStatementAddressIndicator\": null,
+        \"digitalAddresses\": [
+          
+        ],
+        \"emailAddresses\": [
+          
+        ],
+        \"geographicAddresses\": [
+          {
+            \"addressEntpsTypeCode\": \"-2\",
+            \"addressLine1\": null,
+            \"addressLine2\": \"102OLDMAINRD\",
+            \"buildingName\": null,
+            \"careOfName\": null,
+            \"cityName\": \"ISIPINGO\",
+            \"complexName\": null,
+            \"countryEntpsCode\": \"ZA\",
+            \"floorNumber\": null,
+            \"postalAreaNumber\": \"4133\",
+            \"stateDistrictProvinceEntpsTypeCode\": \"-1\",
+            \"stateDistrictProvinceName\": \"\",
+            \"streetName\": null,
+            \"streetNumber\": null,
+            \"subAreaName\": null,
+            \"suburbName\": \"\",
+            \"suiteName\": null,
+            \"unitNumber\": null,
+            \"googlePlusCode\": null
+          }
+        ],
+        \"locationEntpsTypeCode\": \"1\",
+        \"locationTag\": \"\",
+        \"locationUseEntpsTypeCode\": \"3\",
+        \"telephonicAddresses\": [
+          
+        ]
+      }
+    ],
+    \"name\": \"MRMAHOMEDZMAHOMEDZUBAIR\",
+    \"organisation\": null,
+    \"partyCreatedDate\": null,
+    \"partyEntpsTypeCode\": \"1\",
+    \"partyStatusDate\": null,
+    \"partyStatusEntpsTypeCode\": \"1\",
+    \"profileRegistrationName\": null,
+    \"sourcesOfFunds\": [
+      {
+        \"sourceOfFundsAmount\": 0,
+        \"sourceOfFundsDate\": \"20240715\",
+        \"sourceOfFundsEntpsTypeCode\": \"10\",
+        \"sourceOfFundsActiveIndicator\": \"Y\",
+        \"sourceOfFundsCurrencyEntpsTypeCode\": \"-1\",
+        \"sourceOfFundsFrequencyEntpsTypeCode\": \"-1\",
+        \"sourceOfFundsPaymentDay\": null,
+        \"primarySourceOfFundsIndicator\": null
+      }
+    ],
+    \"takeOnAttributes\": [
+      
+    ],
+    \"partyClassifications\": [
+      {
+        \"partyClassificationTypeCode\": \"1\",
+        \"partyClassificationAttributeName\": \"depositTakingInstitutionEntpsTypeCode\",
+        \"partyClassificationValue\": \"8\",
+        \"partyClassificationActiveIndicator\": \"Y\"
+      }
+    ]
+  }
+}"}

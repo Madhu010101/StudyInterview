@@ -1,0 +1,3 @@
+INSERT INTO cishfid.residency_status_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, rsdncy_stts_src_tp_cd, rsdncy_stts_src_tp_desc, rsdncy_stts_entps_tp_cd, rsdncy_stts_tp_cd, eff_dte, exp_dte) VALUES (nextval('cishfid.residency_status_type_id_seq'), 'CIS', 15, 50095155, 'RESIDENCE STATUS', 'RESIDENCY STATUS', '08', 'DIPLOMAT', 10, 'DIPLOMAT', null, null);
+INSERT INTO cishfid.residency_status_type (id, stm_tp_cd, cmpny_tp_cd, src_tbl_no, src_tbl_nme, src_cat, rsdncy_stts_src_tp_cd, rsdncy_stts_src_tp_desc, rsdncy_stts_entps_tp_cd, rsdncy_stts_tp_cd, eff_dte, exp_dte) VALUES (nextval('cishfid.residency_status_type_id_seq'), 'CIS', 15, 50095155, 'RESIDENCE STATUS', 'RESIDENCY STATUS', '09', 'IMMIGRANT', 11, 'IMMIGRANT', null, null);
+commit;

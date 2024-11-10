@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: normal-event-transformation-configmap
+  namespace: idna-ira-fusebusinessobject-int
+data:
+  properties.cfg: >-
+    kafka.consumer.topic=za.dev.raw.hcpds.events.normal.1
+
+    kafka.consumer.brokers=dna-r1eehdkaf01.fnb.co.za:9093,dna-r1eehdkaf02.fnb.co.za:9094,dna-r1eehdkaf03.fnb.co.za:9092
+
+    kafka.auto.offset.reset=earliest
+
+    kafka.group.id=normal_events_dev
+
+    kafka.consumer.value.deserializer=za.co.fnb.idna.ConfluentKafkaAvroDeserializer
+
+    kafka.consumer.key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+    
+    kafka.consumer.security.protocol=SASL_PLAINTEXT
+    
+    kafka.producer.value.serializer=za.co.fnb.idna.ConfluentKafkaAvroSerializer
+    
+    kafka.producer.key.serializer=StringSerializer.class.getName()
+
+    kafka.producer.topic=za.dev.busevent.hcpds.normal.1
+    
+    consumer.sasl.jaas.config=com.sun.security.auth.module.Krb5LoginModule required storeKey=true useKeyTab=true keyTab="/deployments/etc/SVC_HC_DIG_INT_DEV.keytab" principal="SVC_HC_DIG_INT_DEV@FNB.CO.ZA" serviceName="svc_idna_eeh_kk_dev" debug=true;
+
+    schema.reg.url=https://dna-r1eehdcc01.fnb.co.za:9090
+
+    source.credentials=SVC_HC_DIG_INT_DEV:S3rv!c3@CcD3v
+
+    truststore.location=/deployments/etc/truststore.jks
+    
+    keystore.location=/deployments/etc/keystore.jks
+    
+    truststore.password=Oo9gp6w*1_D3v
+    
+    keystore.password=123123
+    
+    template.location=file:/deployments/etc/template.ftl

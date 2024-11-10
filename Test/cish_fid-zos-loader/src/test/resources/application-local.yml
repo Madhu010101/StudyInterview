@@ -1,0 +1,38 @@
+logging:
+  file:
+    max-history: 7
+    name: server.log
+  level:
+    za.co.fnb: debug
+server:
+  port: 8888
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/cishdb?currentSchema=cishfid
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+
+gateway:
+  pep3:
+    url: http://pepv3-dev.fnb.co.za:8000
+    jwt:
+      pkPath: /config/dev/GatewayPK.pem
+      kid: gtwycust.1
+      iss: gtwycust
+      expSeconds: 60
+  zosconnect:
+    useBasicAuth: true
+    url: http://10.33.255.17:9883
+    login: IMSZC001
+    password: IMSZC001
+    header:
+      branch: 1
+      terminal: 1
+

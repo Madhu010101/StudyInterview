@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dlqmntr
+spring:
+ # datasource:
+ #  hikari:
+ #     connectionTimeout: 20000
+ #     maximumPoolSize: 5
+ #   password: ENC(7OtmrDNQb9J0PjzowHn/bK4Zib6CB1DmeX7THbtPbfc=)
+ #   url: jdbc:postgresql://localhost:4040/cstchedb?currentSchema=cstche
+ #   username: ENC(7OtmrDNQb9J0PjzowHn/bK4Zib6CB1DmeX7THbtPbfc=)
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndTripleDES
+    password: LocalCustomerCache
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+logging:
+  file:
+    max-history: 7
+    name: server.log
+  level:
+    za.co.fnb : debug

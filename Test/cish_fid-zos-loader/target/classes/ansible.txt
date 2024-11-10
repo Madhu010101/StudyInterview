@@ -1,0 +1,1 @@
+ansible.artifact.version=${bambooVersionNumber}

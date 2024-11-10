@@ -1,0 +1,92 @@
+spec:
+  replicas: 3
+  template:
+    spec:
+      volumes:
+        - name: idna-config
+          configMap:
+            defaultMode: 420
+            name: cst-relationshipmasterentity-transformer-configmap
+        - name: -relationshipmasterentity-schema-config
+          configMap:
+            defaultMode: 420
+            name: cst-relationshipmasterentity-schema-configmap
+        - name: relationshipmasterentity-freemarker-config
+          configMap:
+            defaultMode: 420
+            name: cst-relationshipmasterentity-freemarker-configmap
+        - name: graylog-config
+          configMap:
+            defaultMode: 420
+            name: graylog-configmap
+        - name: krb5-config
+          configMap:
+            name: krb5-config
+        - name: kafka-jaas-relationshipmasterentity
+          configMap:
+            name: kafka-jaas-relationshipmasterentity
+        - name: cst-relationshipmasterentity-prod-keytab
+          secret:
+            secretName: svc-relationshipmasterentity-prod-keytab
+      containers:
+        -
+          env:
+            - name: TZ
+              value: Africa/Johannesburg
+            - name: JAVA_OPTS
+              value: >-
+                -Djava.security.krb5.conf=/etc/krb5.conf 
+                -Djava.security.auth.login.config=/deployments/karaf/etc/kafka.jaas
+          ports:
+            - containerPort: 9090
+              name: schemareg
+              protocol: TCP
+          volumeMounts:
+          - name: idna-config
+            mountPath: /deployments/karaf/etc/properties.cfg
+            subPath: properties.cfg
+          - mountPath: /etc/krb5.conf
+            name: krb5-config
+            subPath: krb5.conf
+          - name: kafka-jaas-relationshipmasterentity
+            mountPath: /deployments/karaf/etc/kafka.jaas
+            subPath: kafka.jaas
+          - mountPath: /deployments/karaf/etc/SVC_PM_OPM1_prod.keytab
+            name: cst-relationshipmasterentity-prod-keytab
+            subPath: SVC_PM_OPM1_prod.keytab
+            readOnly: true
+          - name: relationshipmasterentity-schema-config
+            mountPath: /deployments/karaf/etc/RelationshipMasterModel.avsc
+            subPath: RelationshipMasterModel.avsc
+          - name: relationshipmasterentity-freemarker-config
+            mountPath: /deployments/karaf/etc/transform.ftl
+            subPath: transform.ftl
+          - name: graylog-config
+            mountPath: /deployments/karaf/etc/org.ops4j.pax.logging.cfg
+            subPath: org.ops4j.pax.logging.cfg
+      dnsPolicy: ClusterFirst
+      hostAliases:
+        - hostnames:
+            - dna-r1eehpkaf01.fnb.co.za
+          ip: 172.16.36.66
+        - hostnames:
+            - dna-r1eehpkaf02.fnb.co.za
+          ip: 172.16.36.67
+        - hostnames:
+            - dna-r1eehpkaf03.fnb.co.za
+          ip: 172.16.36.64
+        - hostnames:
+            - dna-r1eehpamb01.fnb.co.za
+          ip: 172.16.36.93
+        - hostnames:
+            - dna-r1eehcpkaf01.fnb.co.za
+          ip: 172.16.36.109
+        - hostnames:
+            - dna-r1eehcpkaf02.fnb.co.za
+          ip: 172.16.36.110
+        - hostnames:
+            - dna-r1eehcpkaf03.fnb.co.za
+          ip: 172.16.36.111
+        - hostnames:
+            - dna-r1eehcpamb01.fnb.co.za
+          ip: 172.16.36.106

@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    fabric8.io/git-commit: d7b75bd44fa7c72cb441a56292f68d7f529f844c
+    fabric8.io/git-branch: cache_schema_change
+    fabric8.io/git-url: http://F5177014@idna-bitbucket.fnb.co.za/scm/ieeh/cst-partymaster-transformer-springboot-confluent.git
+    fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/cst-partymaster-transformer-springboot-confluent
+    fabric8.io/scm-tag: HEAD
+    prometheus.io/port: "9779"
+    prometheus.io/scrape: "true"
+  labels:
+    expose: "true"
+    app: cst-partymaster-transformer-springboot-confluent
+    provider: fabric8
+    version: "1.0"
+    group: za.co.fnb
+  name: cst-partymaster-transformer-springboot-confluent
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: cst-partymaster-transformer-springboot-confluent
+    provider: fabric8
+    group: za.co.fnb

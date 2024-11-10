@@ -1,0 +1,71 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /fidmntr
+  ssl:
+    client-auth:
+spring:
+  profiles:
+    active: local
+  activemq:
+    app1:
+      url: failover://tcp://localhost:61616
+      jolokia-url: http://localhost:8161/api/jolokia
+      broker-name: localhost
+    app2:
+      url: failover://tcp://localhost:61616
+      jolokia-url: http://localhost:8161/api/jolokia
+      broker-name: localhost
+    in-memory: false
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+    producer-window-size: 1024000
+    session-cache-size: 10
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password: password
+    url: jdbc:postgresql://localhost:5432/cishdb?currentSchema=cishfid
+    username: postgres
+#    driver-class-name: org.postgresql.Driver
+  jpa:
+    show_sql : true
+    hibernate:
+      ddl-auto: none
+
+dlq-queues: DLQ.za.dev.busobj.firstid.masterentity.1
+
+#customer:
+#  demographicQueue: dev.recon.demographic
+#  productHoldingQueue: dev.recon.productholding
+#  publishEventQueue: dev.event.publishevent
+#  updateEventQueue: dev.event.updateevent
+#  concurrent_consumers: 1-5
+
+dlq:
+  email:
+    sender: mabongi.madlopha@fnb.co.za
+    recipients: mabongi.madlopha@fnb.co.za
+  file:
+    incoming: /opt/app/fidmntr/incoming/
+    #/opt/app/dlqmntr/incoming/
+    done: /opt/app/fidmntr/done/
+
+
+jasypt:
+  encryptor:
+    algorithm: admin
+    password: admin
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+logging:
+  file:
+    max-history: 7
+    name: server.log
+  level:
+    za.co.fnb: debug
+    #org.flywaydb: debug
+

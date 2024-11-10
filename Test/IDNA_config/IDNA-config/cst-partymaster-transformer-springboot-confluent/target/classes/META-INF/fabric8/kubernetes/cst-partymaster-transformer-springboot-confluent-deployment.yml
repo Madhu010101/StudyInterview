@@ -1,0 +1,75 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    fabric8.io/git-commit: d7b75bd44fa7c72cb441a56292f68d7f529f844c
+    fabric8.io/git-branch: cache_schema_change
+    fabric8.io/git-url: http://F5177014@idna-bitbucket.fnb.co.za/scm/ieeh/cst-partymaster-transformer-springboot-confluent.git
+    fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/cst-partymaster-transformer-springboot-confluent
+    fabric8.io/scm-tag: HEAD
+  labels:
+    app: cst-partymaster-transformer-springboot-confluent
+    provider: fabric8
+    version: "1.0"
+    group: za.co.fnb
+  name: cst-partymaster-transformer-springboot-confluent
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: cst-partymaster-transformer-springboot-confluent
+      provider: fabric8
+      group: za.co.fnb
+  template:
+    metadata:
+      annotations:
+        fabric8.io/git-commit: d7b75bd44fa7c72cb441a56292f68d7f529f844c
+        fabric8.io/git-branch: cache_schema_change
+        fabric8.io/scm-tag: HEAD
+        fabric8.io/git-url: http://F5177014@idna-bitbucket.fnb.co.za/scm/ieeh/cst-partymaster-transformer-springboot-confluent.git
+        fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/cst-partymaster-transformer-springboot-confluent
+      labels:
+        app: cst-partymaster-transformer-springboot-confluent
+        provider: fabric8
+        version: "1.0"
+        group: za.co.fnb
+    spec:
+      containers:
+      - env:
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        image: cst-partymaster-transformer-springboot-confluent:1.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+          successThreshold: 1
+        name: spring-boot
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 9779
+          name: prometheus
+          protocol: TCP
+        - containerPort: 8778
+          name: jolokia
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          successThreshold: 1
+        securityContext:
+          privileged: false

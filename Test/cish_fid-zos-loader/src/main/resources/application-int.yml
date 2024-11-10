@@ -1,0 +1,65 @@
+server:
+  port:
+  servlet:
+    context-path: /fidzosld
+#  ssl:
+#    enabled: true
+#    protocol: TLS
+#    enabled-protocols: TLSv1.2
+#    key-store: /security/{{ inventory_hostname }}.jks
+#    key-store-password: changeit
+#    key-store-type: JKS
+
+logging:
+  file:
+    max-history: 7
+    name: /opt/app/logs/server.log
+  level:
+    za.co.fnb : info
+    org.flywaydb: info
+
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password:
+    url:
+    username:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  mvc:
+    pathmatch:
+      matching-strategy : ANT_PATH_MATCHER
+
+jasypt:
+  encryptor:
+    algorithm: {{ key }}
+    password: {{ key_pass }}
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+gateway:
+  pep3:
+#    url: http://pepv3-int.fnb.co.za:8000
+    url: https://pepv3-int.fnb.co.za:8443
+    jwt:
+      pkPath: /config/int/FidzosldPK.pem
+      kid: fidzosld.1
+      iss: fidzosld
+      expSeconds: 60
+  zosconnect:
+    useBasicAuth: false
+    url: http://10.33.255.17:9880
+    login: IMSZC001
+    password: IMSZC001
+    header:
+      branch: 1
+      terminal: 1
+Fid:
+  execution:
+    maxPoolSize: 5
+    queueCapacity: 10000
+  resend:
+    maxPoolSize: 5
+    queueCapacity: 100

@@ -1,0 +1,41 @@
+logging:
+  file:
+    max-history: 7
+    name: /opt/app/logs/server.log
+    max-size: 100MB
+  level:
+    za.co.fnb: info
+server:
+  port: 18243
+spring:
+  activemq:
+    broker-one:
+      url: failover://ssl://cit-rqucishmsg.fnb.co.za:61617
+    broker-two:
+      url: failover://ssl://cit-rqucishmsg.fnb.co.za:61617
+    user:
+    password:
+    in-memory: false
+    pool:
+      enabled: true
+
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password:
+    url:
+    username:
+  jpa:
+    hibernate:
+      ddl-auto: none
+jasypt:
+  encryptor:
+    algorithm:
+    password:
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+customer:
+  fid:
+    queue : za.qa.busobj.firstid.masterentity.1
+    concurrent_consumers: 2
+

@@ -1,0 +1,29 @@
+{
+  "input" : {
+    "headerInput" : {
+      "originatingChannel" : "CUSTOMER1",
+      "branch" : 1,
+      "terminal" : 1,
+      "operatorID" : "CISH",
+      "stubName" : "CISGWCIS"
+    },
+    "functionInput" : {
+      "replyOptions" : {
+        "getCustomerDemographicData" : "Y",
+        "getCustomerContactData" : "Y",
+        "getCustomerAddressData" : "Y",
+        "getCustomerEducationData" : "Y",
+        "getCustomerMarketingConsentData" : "Y",
+        "getCustomerIdNumberData" : "Y",
+        "getCustomerBankRelationshipData" : "Y",
+        "getCustomerBankServicesData" : "Y"
+      },
+      "searchKeyOption" : {
+        "ucnKey" : {
+          "customerCompanyId" : -2,
+          "customerNumber" : 46719255
+        }
+      }
+    }
+  }
+}

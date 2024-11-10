@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/InetrviewGuideCodeTest/java Interview quetion/JavaInterviewQuestionsAndAnswers/JavaInterviewGuide.iml" filepath="$PROJECT_DIR$/InetrviewGuideCodeTest/java Interview quetion/JavaInterviewQuestionsAndAnswers/JavaInterviewGuide.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter+7+v2/Chapter 7/fleetman-webapp/fleetman.iml" filepath="$PROJECT_DIR$/Chapter+7+v2/Chapter 7/fleetman-webapp/fleetman.iml" />
       <module fileurl="file://$PROJECT_DIR$/gs-scheduling-tasks-main/complete/scheduling-tasks-complete.iml" filepath="$PROJECT_DIR$/gs-scheduling-tasks-main/complete/scheduling-tasks-complete.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />

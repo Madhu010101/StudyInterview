@@ -1,0 +1,63 @@
+server:
+  port: 9543
+  servlet:
+    context-path: /dlqmntr
+spring:
+  profiles:
+    active: qa
+  activemq:
+    app1:
+      url: failover://ssl://cit-rqucstapp1.fnb.co.za:61617
+      jolokia-url: https://cit-rqucstapp1:8161/api/jolokia
+      broker-name: localhost
+    app2:
+      url: failover://ssl://cit-rqucstapp1.fnb.co.za:61617
+      jolokia-url: https://cit-rqucstapp1:8161/api/jolokia
+      broker-name: localhost
+    user:
+    password:
+    in-memory: false
+    pool:
+      enabled: true
+    producer-window-size: 1024000
+    session-cache-size: 10
+
+jasypt:
+  encryptor:
+    algorithm: 
+    password: 
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+logging:
+  file:
+    max-history: 7
+    name: logs/server.log
+  level:
+    za.co.fnb : debug
+    #org.flywaydb: debug
+
+customer:
+  republish:
+    demographicQueue: qa.republish.demographic
+    productHoldingQueue: qa.republish.productholding
+  applicationPropertiesUrl: 
+  applicationResponseCodeUrl:
+
+dlq-queues: DLQ.gh.qa.raw.cis.ims.ci0regp1.s0042304,DLQ.gh.qa.raw.cis.ims.ci0regp1.s0042309,DLQ.gh.qa.raw.cis.ims.hg0adfp1.s0024321,DLQ.gh.qa.raw.cis.ims.hg0adfp1.s0024323,
+        DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024301,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024302,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024303,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024306,
+        DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024314,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024315,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024316,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024319,
+        DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024372,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024373,DLQ.gh.qa.raw.cis.ims.hg0cifp1.s0024374,DLQ.na.qa.raw.cis.ims.ci0regp1.s0042304,
+        DLQ.na.qa.raw.cis.ims.ci0regp1.s0042309,DLQ.na.qa.raw.cis.ims.hg0adfp1.s0024321,DLQ.na.qa.raw.cis.ims.hg0adfp1.s0024323,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024301,
+        DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024302,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024303,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024306,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024314,
+        DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024315,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024316,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024319,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024372,
+        DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024373,DLQ.na.qa.raw.cis.ims.hg0cifp1.s0024374,DLQ.za.qa.raw.cis.ims.ci0conp1.s0095746,DLQ.za.qa.raw.cis.ims.ci0conp1.s0095749,
+        DLQ.za.qa.raw.cis.ims.ci0regp1.s0042304,DLQ.za.qa.raw.cis.ims.ci0regp1.s0042309,DLQ.za.qa.raw.cis.ims.hg0adfp1.s0024321,DLQ.za.qa.raw.cis.ims.hg0adfp1.s0024323,
+        DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024301,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024302,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024303,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024306,
+        DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024308,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024314,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024315,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024316,
+        DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024319,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024372,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024373,DLQ.za.qa.raw.cis.ims.hg0cifp1.s0024374
+dlq:
+  email:
+    sender: dlfnbcishavengers@fnb.co.za
+    recipients: dlfnbcishavengers@fnb.co.za
+  file:
+    incoming: dlqmntr/incoming/
+    done: dlqmntr/done/

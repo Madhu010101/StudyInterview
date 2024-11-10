@@ -1,0 +1,23 @@
+KafkaClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_dna_eh_kk_prod"
+keyTab="/deployments/karaf/etc/SVC_KFKA_CUS_PROD.keytab"
+principal="SVC_KFKA_CUS_PROD@FNB.CO.ZA";
+};
+
+RegistryClient {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_dna_eh_kk_prod"
+keyTab="/deployments/karaf/etc/SVC_KFKA_CUS_PROD.keytab"
+principal="SVC_KFKA_CUS_PROD@FNB.CO.ZA";
+};
+
+com.sun.security.jgss.krb5.initiate {
+com.sun.security.auth.module.Krb5LoginModule required
+useKeyTab=true
+serviceName="svc_dna_eh_kk_prod"
+keyTab="/deployments/karaf/etc/SVC_KFKA_CUS_PROD.keytab"
+principal="SVC_KFKA_CUS_PROD@FNB.CO.ZA";
+};

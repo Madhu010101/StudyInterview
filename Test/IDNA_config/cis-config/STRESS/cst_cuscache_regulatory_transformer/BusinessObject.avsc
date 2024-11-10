@@ -1,0 +1,360 @@
+{
+  "type" : "record",
+  "name" : "CustomerRegulatory",
+  "namespace" : "za.stress.busobj.customer.regulatory.1",
+  "fields" : [ {
+    "name" : "customer",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Customer",
+      "fields" : [{
+        "name" : "individual",
+        "type" : [ "null", {
+          "type" : "record",
+          "name" : "Individual",
+          "fields" : [ {
+            "name" : "debtCounsellingIndicator",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "birthCityName",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "employerIndustryTypeCode",
+            "type" : [ "null", "string" ]
+          }]
+        } ]
+      },{
+        "name" : "organisation",
+        "type" : [ "null", {
+          "type" : "record",
+          "name" : "Organisation",
+          "fields" : [ {
+            "name" : "beeAccreditorName",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "beePercentage",
+            "type" : [ "null", {
+              "type" : "int",
+              "java-class" : "java.lang.Integer"
+            } ]
+          }, {
+            "name" : "beeStatusDate",
+            "type" : [ "null", {
+              "type" : "long",
+              "java-class" : "java.lang.Long"
+            } ]
+          }, {
+            "name" : "beeStatusTypeCode",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "businessRescueDate",
+            "type" : [ "null", {
+              "type" : "long",
+              "java-class" : "java.lang.Long"
+            } ]
+          },  {
+            "name" : "controlVerifiedIndicator",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "organisationStatusDate",
+            "type" : [ "null", {
+              "type" : "long",
+              "java-class" : "java.lang.Long"
+            } ]
+          }, {
+            "name" : "organisationStatusTypeCode",
+            "type" : [ "null", "string" ]
+          },          {
+            "name" : "primaryBusinessTypeCode",
+            "type" : [ "null", "string" ]
+          },{
+            "name" : "industryTypeCode",
+            "type" : [ "null", {
+              "type" : "int",
+              "java-class" : "java.lang.Integer"
+            } ]
+          }, {
+            "name" : "creditHighRiskIndicator",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "creditHighRiskDate",
+            "type" : [ "null", {
+              "type" : "long",
+              "java-class" : "java.lang.Long"
+            } ]
+          }, {
+            "name" : "distressedRestructureIndicator",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "businessRescueIndicator",
+            "type" : [ "null", "string" ]
+          },
+          {
+            "name" : "distressedRestructureDate",
+            "type" : [ "null", {
+              "type" : "long",
+              "java-class" : "java.lang.Long"
+            } ]
+          }]
+        } ]
+      }, {
+            "name" : "regulatoryRisk",
+            "type" : [ "null", {
+              "type" : "record",
+              "name" : "RegulatoryRisk",
+              "fields" : [ {
+                "name" : "riskCategoryTypeCode",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "riskReasonTypeCode",
+                "type" : [ "null", {
+                  "type" : "int",
+                  "java-class" : "java.lang.Integer"
+                } ]
+              }, {
+                "name" : "riskRatingTypeCode",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "riskRatingModelTypeCode",
+                "type" : [ "null", "string" ]
+              } ]
+            } ]
+          }, {
+            "name" : "regulatoryCRS",
+            "type" : [ "null", {
+              "type" : "record",
+              "name" : "RegulatoryCRS",
+              "fields" : [ {
+                "name" : "foreignTaxLiabilityIndicator",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "foreignTaxSelfCertificationDate",
+                "type" : [ "null", {
+                  "type" : "long",
+                  "java-class" : "java.lang.Long"
+                } ]
+              }, {
+                "name" : "foreignTaxCompliantIndicator",
+                "type" : [ "null", "string" ]
+              } ]
+            } ]
+          }, {
+            "name" : "regulatoryKYC",
+            "type" : [ "null", {
+              "type" : "record",
+              "name" : "RegulatoryKYC",
+              "fields" : [ {
+                "name" : "primaryKYCCondition",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "kycverifiedDate",
+                "type" : [ "null", {
+                  "type" : "long",
+                  "java-class" : "java.lang.Long"
+                } ]
+              }, {
+                "name" : "kycrefreshReviewIndicator",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "kycrefreshReviewDate",
+                "type" : [ "null", {
+                  "type" : "long",
+                  "java-class" : "java.lang.Long"
+                } ]
+              }, {
+                "name" : "kycrefreshCompliantIndicator",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "addressVerifiedIndicator",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "identificationVerifiedIndicator",
+                "type" : [ "null", "string" ]
+              } ]
+            } ]
+          }, {
+        "name" : "foreignTaxIdentification",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "ForeignTaxIdentification",
+            "fields" : [ {
+              "name" : "identificationTypeCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "identificationSequence",
+              "type" : [ "null", "string" ]
+            }, {
+                "name" : "identificationIssueDate",
+                "type" : [ "null", {
+                    "type" : "long",
+                    "java-class" : "java.lang.Long"
+                } ]
+            }, {
+                "name" : "identificationExpiryDate",
+                "type" : [ "null", {
+                    "type" : "long",
+                    "java-class" : "java.lang.Long"
+                } ]
+            }, {
+              "name" : "identificationIssuerCountryCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "identificationNumber",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "foreignTaxIdentityClassificationTypeCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "foreignTaxIdentityStatusTypeCode",
+              "type" : [ "null", "string" ]
+            }]
+          },
+          "java-class" : "java.util.Set"
+        } ]
+      }, {
+        "name" : "partyFunds",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "PartyFunds",
+            "fields" : [ {
+              "name" : "sourceOfFundsSequence",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "sourceOfFundsTypeCode",
+              "type" : [ "null", "string" ]
+            }, {
+                "name" : "sourceOfFundsDate",
+                "type" : [ "null", {
+                    "type" : "long",
+                    "java-class" : "java.lang.Long"
+                } ]
+            }]
+          },
+          "java-class" : "java.util.Set"
+        } ]
+      }, {
+        "name" : "customerTypeCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "partyTypeCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "name",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "depositTakingInstitutionTypeCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "sanctionScreeningStatusTypeCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "bankExitDecisionIndicator",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "placeHardHoldIndicator",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "noForexSARBIndicator",
+        "type" : [ "null", "string" ]
+      }]
+    } ]
+  }, {
+    "name" : "eventHeader",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "EventHeader",
+      "fields" : [ {
+        "name" : "correlation",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "Correlation",
+            "fields" : [ {
+              "name" : "correlationName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "correlationValue",
+              "type" : [ "null", "string" ]
+            } ]
+          },
+          "java-class" : "java.util.Set"
+        } ]
+      }, {
+        "name" : "eventAction",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "eventArchContext",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "eventDateTime",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "eventOrigin",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "EventOrigin",
+            "fields" : [ {
+              "name" : "eventOriginName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "eventOriginType",
+              "type" : [ "null", "string" ]
+            } ]
+          },
+          "java-class" : "java.util.Set"
+        } ]
+      }, {
+        "name" : "eventUUID",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "sourceSystemCode",
+        "type" : [ "null", "string" ]
+      } ]
+    } ]
+  }, {
+    "name" : "key",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Key",
+      "fields" : [ {
+        "name" : "customerCompanyTypeCode",
+        "type" : [ "null", {
+          "type" : "int",
+          "java-class" : "java.lang.Integer"
+        } ]
+      }, {
+        "name" : "customerUniqueNumber",
+        "type" : [ "null", {
+          "type" : "long",
+          "java-class" : "java.lang.Long"
+        } ]
+      } ]
+    } ]
+  }, {
+    "name" : "alternateKey",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "AlternateKey",
+      "fields" : [ {
+        "name" : "customerCompanyTypeCode",
+        "type" : [ "null", {
+          "type" : "int",
+          "java-class" : "java.lang.Integer"
+        } ]
+      }, {
+        "name" : "customerUniqueNumber",
+        "type" : [ "null", {
+          "type" : "long",
+          "java-class" : "java.lang.Long"
+        } ]
+      } ]
+    } ]
+  } ]
+}

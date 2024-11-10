@@ -1,0 +1,7 @@
+server:
+  port: 9090
+spring:
+  kafka:
+    producer:
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      topics: za.dev.busobj.firstid.partytopartyrelationship.1

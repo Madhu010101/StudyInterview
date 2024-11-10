@@ -1,0 +1,86 @@
+server:
+  port: 9080
+spring:
+  profiles:
+    active:
+  kinit:
+    keyTabPath: /etc/security/keytab/SVC_hadoop_cdc_dev.keytab
+    principal: SVC_hadoop_cdc_dev@FNB.CO.ZA
+  kafka:
+    properties:
+      schema.registry.url: http://DUMMY_URL:8081
+      basic.auth.credentials.source: USER_INFO
+      schema.registry.basic.auth.user.info: "${krb.user}:${krb.pass}"
+      specific.avro.reader: false
+      schema.host: DUMMY_URL
+      schema.port: 8081
+      schema.version: 1
+      schema.http-protocol: http
+      schema.name: za.dev.busobj.firstid.masterentity
+    consumer:
+      topics: za.dev.busobj.firstid.masterentity.1
+      group-id: FidConsumptionGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      bootstrap-servers: localhost:9092
+      #max-poll-records: 1000
+
+  activemq:
+    app1:
+      url: failover://tcp://localhost:61716
+      jolokia-url: https://localhost:8162/api/jolokia
+      broker-name: localhost
+    app2:
+      url: failover://tcp://localhost:61616
+      jolokia-url: https://localhost:8161/api/jolokia
+      broker-name: localhost
+    broker-url:
+    in-memory: false
+    user: admin
+    password: admin
+    pool:
+        enabled: true
+    producer-window-size: 1024000
+    session-cache-size: 10
+    environment: local
+
+jasypt:
+  encryptor:
+   password: admin
+   algorithm: admin
+   iv-generator-classname: org.jasypt.iv.NoIvGenerator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "metrics,flyway,health,env,heapdump"
+    server:
+      port: 9080
+    endpoint:
+      health:
+        show-details: always
+        enabled: true
+    health:
+      diskspace:
+        enabled: true
+        threshold: 1024MB
+      db:
+        enabled: true
+logging:
+  file:
+    max-history: 7
+    name: server.log
+  level:
+    za.co.fnb: info
+
+filter:
+  key: eventHeader
+  value: CRE
+
+customer:
+  fid:
+    queue: za.dev.busobj.firstid.masterentity.1
+  cache:
+    kafka_reader:
+      concurrent_consumers: 5

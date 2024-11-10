@@ -1,0 +1,41 @@
+server:
+  port: 9880
+  servlet:
+    context-path: /dlqmntr
+spring:
+#  datasource:
+#    hikari:
+#      connectionTimeout: 20000
+#      maximumPoolSize: 5
+#    cstche:
+#      password: sa
+#      url: jdbc:h2:mem:custcachedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;DATABASE_TO_LOWER=TRUE;INIT=CREATE SCHEMA IF NOT EXISTS cstche
+#      username: sa
+#      driver-class-name: org.h2.Driver
+#    goldensource:
+#      password: sa
+#      url: jdbc:h2:mem:custcachedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;DATABASE_TO_LOWER=TRUE;INIT=CREATE SCHEMA IF NOT EXISTS goldensource
+#      username: sa
+#      driver-class-name: org.h2.Driver
+#  flyway:
+#    baseline-on-migrate: true
+#    enabled: false
+#    url: jdbc:h2:mem:custcachedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS cstche
+#    user: sa
+#    password: sa
+#    locations: classpath:db/migration
+#    schemas: cstche, goldensource
+  activemq:
+    broker-url: failover://tcp://localhost:61616
+    user: ENC(ktw0hnLBUuI5iyctmIXIjw==)
+    password: ENC(ktw0hnLBUuI5iyctmIXIjw==)
+    in-memory: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+customer:
+  republish:
+    demographicQueue: dev.republish.demographic
+    productHoldingQueue: dev.republish.productholding
+  applicationPropertiesUrl: http://localhost:8090/properties/{appname}
+  applicationResponseCodeUrl: http://localhost:8090//getResponseCodes

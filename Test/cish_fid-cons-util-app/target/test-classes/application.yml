@@ -1,0 +1,46 @@
+logging:
+  file:
+    max-history: 7
+    name: server.log
+  level:
+    za.co.fnb: debug
+server:
+  port: 8888
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password: sa
+    url: jdbc:h2:mem:cstdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS gateway
+    username: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    baseline-on-migrate: true
+    enabled: false
+    url: jdbc:h2:mem:cstdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS gateway
+    user: sa
+    password: sa
+    locations: classpath:db/migration
+    schemas: gateway
+
+gateway:
+  pep3:
+    url: http://pepv3-dev.fnb.co.za:8000
+    jwt:
+      pkPath: GatewayPK.pem    
+      kid: custgtwy.1
+      iss: custgtwy
+      expSeconds: 60
+  zosconnect:
+    useBasicAuth: true
+    url: http://localhost:8080
+    login: IMSZC001
+    password: IMSZC001
+    header:
+      branch: 0
+      terminal: 1
+

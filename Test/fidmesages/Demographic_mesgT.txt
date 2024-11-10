@@ -1,0 +1,193 @@
+{
+  "eventHeader": {
+    "correlations": [
+      {
+        "correlationName": "eventUUID",
+        "correlationValue": "e72d5781-341c-457a-9863-86ef8a13829c"
+      }
+    ],
+    "eventAction": "c",
+    "eventArchContext": "consume+event",
+    "eventDateTime": "2023-01-19T09:29:13.124672+02:00",
+    "eventOrigins": [
+      {
+        "eventOriginName": "za.int.raw.opm.firstidmasterentity.1",
+        "eventOriginSourceSystemCode": "CRE",
+        "eventOriginType": "topic"
+      }
+    ],
+    "eventUUID": "6ee87988-5e2d-4558-a331-f62abb55182eCRE-1-ZA-1-3242496701-3",
+    "sourceSystemCode": "OPM"
+  },
+  "key": {
+    "keyCompanyEntpsTypeCode": "-2",
+    "keyIdentifierEntpsTypeCode": "4",
+    "keyIdentifierJurisdictionId": 52,
+    "keyIdentifierNumber": "30af97fb-2f96-400d-8635-54a312933a75",
+    "keyIdentifierSystemEntpsTypeCode": "OPM",
+    "keyJurisdictionCountryEntpsCode": "-2"
+  },
+  "party": {
+    "container": null,
+    "conversationLanguageEntpsTypeCode": "-2",
+    "correspondenceLanguageEntpsTypeCode": "1",
+    "homeLanguageEntpsTypeCode": "-2",
+    "identifications": [
+      {
+        "citizenshipCountryEntpsCode": "-2",
+        "identificationBarcodeNumber": null,
+        "identificationEntpsTypeCode": "4",
+        "identificationExpiryDate": "20991231",
+        "identificationIssueDate": "19000101",
+        "identificationIssuerCountryEntpsCode": null,
+        "identificationIssuerEntpsTypeCode": "-2",
+        "identificationNames": [
+          
+        ],
+        "identificationNumber": "T511709/1996",
+        "identificationReferenceNumber": null,
+        "identificationStatusDate": null,
+        "identificationStatusEntpsTypeCode": "-2",
+        "residencyStatusEntpsTypeCode": "-2"
+      },
+      {
+        "citizenshipCountryEntpsCode": "-2",
+        "identificationBarcodeNumber": null,
+        "identificationEntpsTypeCode": "19",
+        "identificationExpiryDate": "20991231",
+        "identificationIssueDate": "19000101",
+        "identificationIssuerCountryEntpsCode": null,
+        "identificationIssuerEntpsTypeCode": "-2",
+        "identificationNames": [
+          
+        ],
+        "identificationNumber": "KGOSITRUSTVAT1234",
+        "identificationReferenceNumber": null,
+        "identificationStatusDate": null,
+        "identificationStatusEntpsTypeCode": "-2",
+        "residencyStatusEntpsTypeCode": "-2"
+      }
+    ],
+    "identifiers": [
+      {
+        "companyEntpsTypeCode": "1",
+        "identifierEndDate": null,
+        "identifierEntpsTypeCode": "2",
+        "identifierNumber": "3242496701",
+        "identifierStartDate": "20230303",
+        "identifierStatusEntpsTypeCode": "1",
+        "identifierSystemEntpsTypeCode": "CIS",
+        "jurisdictionCountryEntpsCode": "ZA",
+        "jurisdictionId": 1,
+        "roleEntpsTypeCode": "1"
+      },
+      {
+        "companyEntpsTypeCode": "1",
+        "identifierEndDate": null,
+        "identifierEntpsTypeCode": "3",
+        "identifierNumber": "3242496701",
+        "identifierStartDate": "20230303",
+        "identifierStatusEntpsTypeCode": "1",
+        "identifierSystemEntpsTypeCode": "CRE",
+        "jurisdictionCountryEntpsCode": "ZA",
+        "jurisdictionId": 1,
+        "roleEntpsTypeCode": "1"
+      }
+    ],
+    "individual": null,
+    "locations": [
+      {
+        "allArrangementStatementAddressIndicator": null,
+        "digitalAddresses": [
+          
+        ],
+        "emailAddresses": [
+          
+        ],
+        "geographicAddresses": [
+          {
+            "addressEntpsTypeCode": "-2",
+            "addressLine1": "addressline",
+            "addressLine2": "",
+            "buildingName": "test",
+            "careOfName": "test10",
+            "cityName": "FLORIDA",
+            "complexName": "knczc",
+            "countryEntpsCode": "ZA",
+            "floorNumber": "8thFLoor",
+            "postalAreaNumber": "1709",
+            "stateDistrictProvinceEntpsTypeCode": "ZA-GP",
+            "stateDistrictProvinceName": "GAUTENG",
+            "streetName": "JNRoad",
+            "streetNumber": "9thstreet",
+            "subAreaName": "Mumbai",
+            "suburbName": "WELTEVREDENPARK",
+            "suiteName": "Octanesuite",
+            "unitNumber": "1stunit"
+          }
+        ],
+        "locationEntpsTypeCode": "1",
+        "locationTag": null,
+        "locationUseEntpsTypeCode": "4",
+        "telephonicAddresses": [
+          
+        ]
+      },
+      {
+        "allArrangementStatementAddressIndicator": null,
+        "digitalAddresses": [
+          
+        ],
+        "emailAddresses": [
+          
+        ],
+        "geographicAddresses": [
+          
+        ],
+        "locationEntpsTypeCode": "2",
+        "locationTag": null,
+        "locationUseEntpsTypeCode": "17",
+        "telephonicAddresses": [
+          {
+            "telephoneAreaDailCode": null,
+            "telephoneCountryDailCode": null,
+            "telephoneEntpsTypeCode": "-2",
+            "telephoneExtensionNumber": null,
+            "telephoneFullNumber": "083Z1234567",
+            "telephoneNumber": null
+          }
+        ]
+      }
+    ],
+    "name": "THAPELOHERDSMAN",
+    "organisation": {
+      "establishedCountryEntpsCode": "ZA",
+      "establishedDate": null,
+      "legalResponsibilityIndicator": null,
+      "operationCountryEntpsCode": "ZA",
+      "operationStartDate": null,
+      "organisationEntpsTypeCode": "45",
+      "organisationStatusDate": null,
+      "organisationStatusEntpsTypeCode": "-1",
+      "registeredHeadOfficeCountryEntpsCode": "ZA",
+      "stateOwnedCompanyIndicator": "N",
+      "taxYearEndMonth": 2,
+      "tradingName": "THAPELOHERDSMAN"
+    },
+    "partyCreatedDate": null,
+    "partyEntpsTypeCode": "2",
+    "partyStatusDate": null,
+    "partyStatusEntpsTypeCode": "-2",
+    "profileRegistrationName": null,
+    "sourcesOfFunds": [
+      {
+        "sourceOfFundsAmount": null,
+        "sourceOfFundsDate": "20230119",
+        "sourceOfFundsEntpsTypeCode": "25"
+      }
+    ],
+    "takeOnAttributes": [
+      
+    ]
+  }
+}

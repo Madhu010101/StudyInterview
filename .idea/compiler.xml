@@ -11,16 +11,11 @@
         <module name="scheduling-tasks-complete" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="fleetman" target="1.8" />
-      <module name="JavaInterviewGuide" target="9" />
-      <module name="scheduling-tasks-complete" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fleetman" options="-parameters" />
-      <module name="scheduling-tasks-complete" options="-parameters" />
+      <module name="scheduling-tasks-complete" options="" />
     </option>
   </component>
 </project>

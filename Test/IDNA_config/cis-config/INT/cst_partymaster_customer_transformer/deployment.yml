@@ -1,0 +1,132 @@
+spec:
+  replicas: 1
+  template:
+    spec:
+      volumes:
+        - name: idna-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-transformer-configmap
+        - name: partymaster-schema-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-schema-configmap
+        - name: partymaster-freemarker-config
+          configMap:
+            defaultMode: 420
+            name: cst-partymaster-freemarker-configmap
+        - name: graylog-config
+          configMap:
+            defaultMode: 420
+            name: graylog-configmap
+        - name: krb5-config
+          configMap:
+            name: krb5-config
+        - name: kafka-jaas-partymaster
+          configMap:
+            name: kafka-jaas-partymaster
+        - name: cst-pm-int-keytab
+          secret:
+            secretName: svc-cus-cache-int-keytab
+        - name: keystore
+          secret:
+            secretName: keystore-ph-secret
+        - name: truststore
+          secret:
+            secretName: truststore-ph-secret
+        - name: logback
+          configMap:
+              name: logback
+      containers:
+        -
+          env:
+            - name: TZ
+              value: Africa/Johannesburg
+            - name: JAVA_OPTS
+              value: >-
+                -Djava.security.krb5.conf=/etc/krb5.conf 
+                -Djava.security.auth.login.config=/deployments/etc/kafka.jaas
+                -Djavax.net.ssl.keyStoreType=jks
+                -Djavax.net.ssl.keyStore=/deployments/etc/keystore.jks
+                -Djavax.net.ssl.keyStorePassword=123123
+                -Djavax.net.ssl.trustStoreType=jks
+                -Djavax.net.ssl.trustStore=/deployments/etc/truststore.jks
+                -Djavax.net.ssl.trustStorePassword=123123
+                 DJAEGER_ENDPOINT=http://jaeger-collector.istio-system.svc.cluster.local:14268/api/traces
+          resources:
+            limits:
+              cpu: '1'
+              memory: 512Mi
+            requests:
+              cpu: 1m
+              memory: 256Mi
+          livenessProbe:
+              httpGet:
+                path: /actuator/health
+                port: 8080
+              initialDelaySeconds: 300
+          readinessProbe:
+              httpGet:
+                path: /actuator/health
+                port: 8080
+              initialDelaySeconds: 300
+          volumeMounts:
+          - name: idna-config
+            mountPath: /deployments/etc/properties.cfg
+            subPath: properties.cfg
+          - mountPath: /etc/krb5.conf
+            name: krb5-config
+            subPath: krb5.conf
+          - name: kafka-jaas-partymaster
+            mountPath: /deployments/etc/kafka.jaas
+            subPath: kafka.jaas
+          - mountPath: /deployments/etc/SVC_CST_CusCache_uat.keytab
+            name: cst-pm-int-keytab
+            subPath: SVC_CST_CusCache_uat.keytab
+            readOnly: true
+          - name: partymaster-schema-config
+            mountPath: /deployments/etc/partymasterSourceBusinessObject.avsc
+            subPath: partymasterSourceBusinessObject.avsc
+          - name: partymaster-freemarker-config
+            mountPath: /deployments/etc/transform.ftl
+            subPath: transform.ftl
+          - name: graylog-config
+            mountPath: /deployments/etc/org.ops4j.pax.logging.cfg
+            subPath: org.ops4j.pax.logging.cfg
+          - mountPath: /deployments/etc/keystore.jks
+            name: keystore
+            subPath: keystore.jks
+            readOnly: true
+          - mountPath: /deployments/etc/truststore.jks
+            name: truststore
+            subPath: truststore.jks
+            readOnly: true
+          - mountPath: /deployments/etc/logback.xml
+            name: logback
+            subPath: logback.xml
+      dnsPolicy: ClusterFirst
+      hostAliases:
+        - hostnames:
+            - dna-r1eehskaf01.fnb.co.za
+          ip: 172.16.35.66
+        - hostnames:
+            - dna-r1eehskaf02.fnb.co.za
+          ip: 172.16.35.67
+        - hostnames:
+            - dna-r1eehskaf03.fnb.co.za
+          ip: 172.16.35.64
+        - hostnames:
+            - dna-r1eehsdoc01.fnb.co.za
+          ip: 172.16.35.96
+        - hostnames:
+            - dna-r1eehcskaf01.fnb.co.za
+          ip: 172.16.35.109
+        - hostnames:
+            - dna-r1eehcskaf02.fnb.co.za
+          ip: 172.16.35.110
+        - hostnames:
+            - dna-r1eehcskaf03.fnb.co.za
+          ip: 172.16.35.111
+        - hostnames:
+            - dna-r1eehcsamb01.fnb.co.za
+          ip: 172.16.35.106
