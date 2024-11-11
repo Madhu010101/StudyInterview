@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
+
+
 public class Anagram {
     static void isAnagram(String str1, String str2) {
         String s1 = str1.replaceAll("\\s", "");
