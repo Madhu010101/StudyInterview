@@ -1,4 +1,0 @@
-TZ: "Africa/Johannesburg"
-SPRING_PROFILES_ACTIVE: "{{ k8s_env }}"
-spring_datasource_url: jdbc:postgresql://{{ db_host }}:4040/cishdb?currentSchema=cishfid&ssl=true&sslmode=require
-spring_datasource_username: "{{ db_user }}"

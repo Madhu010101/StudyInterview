@@ -1,6 +1,0 @@
-TZ: Africa/Johannesburg
-SPRING_PROFILES_ACTIVE: {{ env }}
-spring_datasource_cishfid_url: jdbc:postgresql://{{ db_host }}:4040/cishdb?currentSchema=cishfid&ssl=true&sslmode=require
-spring_flyway_url: jdbc:postgresql://{{ db_host }}:4040/cishdb?ssl=true&sslmode=require
-spring_datasource_cishfid_username: {{ db_user }}
-spring_flyway_user: {{ db_user }}

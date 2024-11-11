@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="9.3">
-<file name="C:\projects\CustomerCache\source\FID_consumption\cish_fid-monitoring\src\main\java\za\co\fnb\cish\fid\monitoring\service\MessageReceiverService.java">
-<error line="64" column="5" severity="warning" message="Cyclomatic Complexity is 11 (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
-</file>
-</checkstyle>
